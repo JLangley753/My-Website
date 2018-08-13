@@ -1,40 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Joe Langley Web Design and Development</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Joe Langley Web Design</title>
 </head>
+
 <body>
 
   <div class="header">
-    <p>Joe Langley Web Design and Development</p>
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
+    <div class="title">
+      <h1>Joe Langley Web Design</h1>
+    </div>
+    <div class="socialmedia">
+      <p>GH</p>
+      <p>TW</p>
+      <p>IG</p>
+      <p>LI</p>
+    </div>
   </div>
 
-  <div class="gallery">
-    <div class="cafe"></div>
-    <div class="boxaphotography"></div>
-    <div class="academicfilmandtv"></div>
+  <div class="intro content-wrap">
+    <h2>summis summis tamen anim cillum nulla irure quid sint quis duis anim sunt amet
+      summis.</h2>
   </div>
 
-  <div class="section-a"></div>
-  
-  <div class="section-b"></div>
+  <div class="gallery content-wrap">
+    <div class="slideshow">
+    <button type="image" src="/assets/img/left.png" class="leftarrow" onclick="plusDivs(-1)">&#10094;</button>
+    <button type="image" src="/assets/img/right.png" class="rightarrow" onclick="plusDivs(+1)">&#10095;</button>
+    <img src="/assets/img/joecafedesk.png" class="mySlides">
+    <img src="/assets/img/boxadesk.png" class="mySlides">
+    <img src="/assets/img/academdesk.png" class="mySlides">
+    </div>
+  </div>
 
-  <div class="section-c"></div>
+  <div class="section-a content-wrap"></div>
+  <h3>labore summis quorum labore</h3>
+  <p>noster ipsum esse sint minim eram elit culpa quis sint anim sint aute labore
+    aute esse fugiat enim dolor irure</p>
+  <div class="section-b content-wrap"></div>
+  <h3>fore irure multos nulla</h3>
+  <p>nulla quorum duis malis irure culpa malis noster illum quid elit magna quem
+    quorum eram amet quorum amet cillum illum</p>
+  <div class="section-c content-wrap"></div>
 
-  <div class="contactus"></div>
+  <div class="contactus content-wrap"></div>
 
-  <div class="aboutme"></div>
+  <div class="aboutme content-wrap"></div>
 
   <div class="footer"></div>
 
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<script src="main/js"></script>
+<script src="main.js"></script>
+
 </html>
