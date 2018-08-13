@@ -3,9 +3,12 @@
 body {
   background-color: #f7f7f7;
   color: #393e46;
+  display: block;
   font-family: Helvetica, sans-serif;
   height: 100%;
-  margin: 0;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
   width: 100%;
 }
 
@@ -71,6 +74,39 @@ h1, h2, h3 {
   left: 0;
 }
 
+/* Tabs */
+
+.tabs {
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+
 /* Section A */
 
+.section-a {
+  background-color: #5c636e;
+  border-radius: 0 3em 3em 0;
+  color: white;
+  padding: 1em;
+  width: 80%;
+}
+
 /* Section B */
+
+.section-b {
+  background-color: #f8b500;
+  border-radius: 3em 0 0 3em;
+  padding: 1em;
+  left: 10%;
+  width: 80%;
+}
+
+/* Section C */
+
+.section-c {
+  background-color: #5c636e;
+  border-radius: 0 3em 3em 0;
+  color: white;
+  padding: 1em 1em 1em 1em;
+  width: 80%;
+}
