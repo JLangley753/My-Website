@@ -6,7 +6,7 @@ body {
   display: block;
   font-family: Helvetica, sans-serif;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 0px;
   margin: 0px;
   width: 100%;
@@ -26,11 +26,24 @@ h1, h2, h3 {
   background-color: #f8b500;
   display: grid;
   grid-template-columns: 7fr 1fr;
-  padding: 0 1em;
+  text-align: center;
+}
+
+.title h1 {
+  padding: 0;
 }
 
 .socialmedia {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 0;
+  padding: 0.8em;
+}
+
+.socialmedia img {
+  height: 24px;
+  width: 24px;
 }
 
 /* Intro */
@@ -40,6 +53,10 @@ h1, h2, h3 {
 }
 
 /* Gallery */
+
+.gallery {
+  padding: 0 0 1em 0;
+}
 
 .slideshow {
   border: 2px solid #393e46;
@@ -74,10 +91,28 @@ h1, h2, h3 {
   left: 0;
 }
 
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}
+
 /* Tabs */
 
 .tabs {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   overflow: hidden;
 }
 
@@ -97,7 +132,7 @@ h1, h2, h3 {
   background-color: #f8b500;
   border-radius: 3em 0 0 3em;
   padding: 1em;
-  left: 10%;
+  float: right;
   width: 80%;
 }
 
