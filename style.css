@@ -27,10 +27,12 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: 7fr 1fr;
   text-align: center;
+  border-radius: 0 0 0.5em 0.5em;
 }
 
 .title h1 {
-  padding: 0;
+  padding: 0.5em;
+  font-size: 1.6em;
 }
 
 .socialmedia {
@@ -38,7 +40,7 @@ h1, h2, h3 {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-row-gap: 0;
-  padding: 0.8em;
+  padding: 1.5em 0.8em;
 }
 
 .socialmedia img {
@@ -63,6 +65,7 @@ h1, h2, h3 {
   margin: 1em;
   padding: 0.3em 0.3em;
   position: relative;
+  border-radius: 0.5em;
 }
 
 .slideshow img {
@@ -113,6 +116,7 @@ h1, h2, h3 {
 
 .tabs {
   margin-bottom: 2em;
+  position: relative;
   overflow: hidden;
 }
 
@@ -144,4 +148,46 @@ h1, h2, h3 {
   color: white;
   padding: 1em 1em 1em 1em;
   width: 80%;
+}
+
+/* Content bullet */
+
+.bullettop {
+  border-radius: 3em 3em 0 0;
+  background-color: #f8b500;
+  height: 200px;
+  margin: 0 3em;
+  padding: 1em 3em;
+}
+
+.bulletmiddle {
+  background-color: #5c636e;
+  color: white;
+  height: 200px;
+  margin: 0 3em;
+  padding: 1em 3em;
+}
+
+.bulletbottom {
+  border-radius: 0 0 3em 3em;
+  background-color: #393e46;
+  color: white;
+  height: 200px;
+  margin: 0 3em;
+  padding: 1em 3em;
+}
+
+/* Contact Us */
+
+/* Section D */
+
+/* About Me */
+
+/* Footer */
+
+.footer {
+  background-color: #f8b500;
+  height: 150px;
+  border-radius: 0.5em 0.5em 0 0;
+  margin: 2em 0 0 0;
 }
