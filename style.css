@@ -48,6 +48,11 @@ h1, h2, h3 {
   width: 24px;
 }
 
+.socialmedia img:hover {
+  opacity: 0.65;
+  transition: 0.3s ease-in-out;
+}
+
 /* Intro */
 
 .intro {
@@ -126,8 +131,15 @@ h1, h2, h3 {
   background-color: #5c636e;
   border-radius: 0 3em 3em 0;
   color: white;
+  left: -400px;
   padding: 1em;
+  transition: 2s;
   width: 80%;
+}
+
+.secaactive {
+  left: 0;
+  transition: 2s;
 }
 
 /* Section B */
@@ -137,7 +149,14 @@ h1, h2, h3 {
   border-radius: 3em 0 0 3em;
   padding: 1em;
   float: right;
+  right: -400px;
+  transition: 2s;
   width: 80%;
+}
+
+.secbactive {
+  right: 0;
+  transition: 2s;
 }
 
 /* Section C */
@@ -146,10 +165,16 @@ h1, h2, h3 {
   background-color: #5c636e;
   border-radius: 0 3em 3em 0;
   color: white;
+  left: -400px;
   padding: 1em 1em 1em 1em;
+  transition: 2s;
   width: 80%;
 }
 
+.seccactive {
+  left: 0;
+  transition: 2s;
+}
 /* Content bullet */
 
 .bullettop {
