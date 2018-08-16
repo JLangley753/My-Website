@@ -5,11 +5,9 @@ body {
   color: #393e46;
   display: block;
   font-family: Helvetica, sans-serif;
-  height: 100%;
   overflow-x: hidden;
   padding: 0px;
   margin: 0px;
-  width: 100%;
 }
 
 h1, h2, h3 {
@@ -100,6 +98,7 @@ h1, h2, h3 {
 }
 
 /* Fading animation */
+
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 3s;
@@ -108,21 +107,30 @@ h1, h2, h3 {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .5}
-  to {opacity: 1}
+  from {
+    opacity: .5
+  }
+  to {
+    opacity: 1
+  }
 }
 
 @keyframes fade {
-  from {opacity: .5}
-  to {opacity: 1}
+  from {
+    opacity: .5
+  }
+  to {
+    opacity: 1
+  }
 }
 
 /* Tabs */
 
 .tabs {
-  margin-bottom: 2em;
+  display: block;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden !important;
+  margin-bottom: 2em;
 }
 
 /* Section A */
@@ -131,7 +139,7 @@ h1, h2, h3 {
   background-color: #5c636e;
   border-radius: 0 3em 3em 0;
   color: white;
-  left: -400px;
+  left: -2200px;
   padding: 1em;
   transition: 2s;
   width: 80%;
@@ -146,16 +154,15 @@ h1, h2, h3 {
 
 .section-b {
   background-color: #f8b500;
-  border-radius: 3em 0 0 3em;
+  border-radius: 0 3em 3em 0;
+  margin-left: -2200px;
   padding: 1em;
-  float: right;
-  right: -400px;
   transition: 2s;
   width: 80%;
 }
 
 .secbactive {
-  right: 0;
+  margin-left: 0;
   transition: 2s;
 }
 
@@ -165,17 +172,29 @@ h1, h2, h3 {
   background-color: #5c636e;
   border-radius: 0 3em 3em 0;
   color: white;
-  left: -400px;
-  padding: 1em 1em 1em 1em;
+  margin-left: -2200px;
+  padding: 1em;
   transition: 2s;
   width: 80%;
 }
 
 .seccactive {
-  left: 0;
+  margin-left: 0;
   transition: 2s;
 }
+
 /* Content bullet */
+
+.bullet {
+  opacity: 0;
+  position: relative;
+  transition: 2s;
+}
+
+.bulletactive {
+  opacity: 1;
+  transition: 4s;
+}
 
 .bullettop {
   border-radius: 3em 3em 0 0;
@@ -215,4 +234,17 @@ h1, h2, h3 {
   height: 150px;
   border-radius: 0.5em 0.5em 0 0;
   margin: 2em 0 0 0;
+}
+
+/* Media Queries */
+
+@media (min-width: 700px) {
+  .gallery {
+    width: 45%;
+    margin: 0 auto;
+  }
+  #bullet {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
