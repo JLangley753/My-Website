@@ -124,6 +124,12 @@ h1, h2, h3 {
   }
 }
 
+/*What we do*/
+
+.whatwedo {
+  text-align: center;
+}
+
 /* Tabs */
 
 .tabs {
@@ -133,6 +139,26 @@ h1, h2, h3 {
   margin-bottom: 2em;
 }
 
+.tabs img {
+  float: left;
+  padding: 0 1em 0 0;
+  width: 50%;
+}
+
+.tabs p {
+  clear: left;
+}
+
+.tabs h3 {
+  margin: 0;
+  padding: 0.5em 0 0 0;
+}
+
+.tab-content {
+  display: inline-block;
+  padding: 0.5em;
+}
+
 /* Section A */
 
 .section-a {
@@ -140,14 +166,14 @@ h1, h2, h3 {
   border-radius: 0 3em 3em 0;
   color: white;
   left: -2200px;
-  padding: 1em;
-  transition: 2s;
-  width: 80%;
+  padding: 0.5em;
+  transition: 2s ease;
+  width: 90%;
 }
 
 .secaactive {
   left: 0;
-  transition: 2s;
+  transition: 2s ease;
 }
 
 /* Section B */
@@ -156,14 +182,14 @@ h1, h2, h3 {
   background-color: #f8b500;
   border-radius: 0 3em 3em 0;
   margin-left: -2200px;
-  padding: 1em;
-  transition: 2s;
-  width: 80%;
+  padding: 0.5em;
+  transition: 2s ease;
+  width: 90%;
 }
 
 .secbactive {
   margin-left: 0;
-  transition: 2s;
+  transition: 2s ease;
 }
 
 /* Section C */
@@ -173,14 +199,14 @@ h1, h2, h3 {
   border-radius: 0 3em 3em 0;
   color: white;
   margin-left: -2200px;
-  padding: 1em;
-  transition: 2s;
-  width: 80%;
+  padding: 0.5em;
+  transition: 2s ease;
+  width: 90%;
 }
 
 .seccactive {
   margin-left: 0;
-  transition: 2s;
+  transition: 2s ease;
 }
 
 /* Content bullet */
@@ -188,12 +214,12 @@ h1, h2, h3 {
 .bullet {
   opacity: 0;
   position: relative;
-  transition: 2s;
+  transition: 2s ease;
 }
 
 .bulletactive {
   opacity: 1;
-  transition: 4s;
+  transition: 4s ease;
 }
 
 .bullettop {
@@ -243,7 +269,7 @@ h1, h2, h3 {
     width: 45%;
     margin: 0 auto;
   }
-  #bullet {
+  .bullet, .bulletactive {
     width: 60%;
     margin: 0 auto;
   }
