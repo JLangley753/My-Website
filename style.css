@@ -65,6 +65,7 @@ h1, h2, h3 {
 
 .intro {
   margin: 0 auto;
+  padding: 0 2em;
   text-align: center;
 }
 
