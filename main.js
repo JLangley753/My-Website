@@ -31,39 +31,39 @@ window.onscroll = function() {
 function showWhatDo() {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     document.getElementById('whatwedo').className = "whatwedoactive";
-  } else {
+  } /*else {
     document.getElementById('whatwedo').className = 'whatwedo';
-  }
+  }*/
 };
 
 function secASlide() {
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
     document.getElementById('secATab').className = "section-a tabs secaactive";
-  } else {
+  } /*else {
     document.getElementById('secATab').className = 'section-a tabs';
-  }
+  }*/
 };
 
 function secBSlide() {
   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
     document.getElementById('secBTab').className = "section-b tabs secbactive";
-  } else {
+  } /*else { 
     document.getElementById('secBTab').className = 'section-b tabs';
-  }
+  }*/
 };
 
 function secCSlide() {
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
     document.getElementById('secCTab').className = "section-c tabs seccactive";
-  } else {
+  } /*else {
     document.getElementById('secCTab').className = 'section-c tabs';
-  }
+  }*/
 };
 
 function showBullet() {
   if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
     document.getElementById('bullet').className = "bulletactive";
-  } else {
+  } /*else {
     document.getElementById('bullet').className = 'bullet';
-  }
+  }*/
 };
