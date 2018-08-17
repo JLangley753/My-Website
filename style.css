@@ -54,7 +54,8 @@ h1, h2, h3 {
 /* Intro */
 
 .intro {
-  margin: 0 1em;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* Gallery */
@@ -127,7 +128,19 @@ h1, h2, h3 {
 /*What we do*/
 
 .whatwedo {
+  opacity: 0;
+  margin: 0 auto;
+  position: relative;
   text-align: center;
+  transition: 1s ease;
+}
+
+.whatwedoactive {
+  opacity: 1;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  transition: 1s ease;
 }
 
 /* Tabs */
@@ -167,13 +180,13 @@ h1, h2, h3 {
   color: white;
   left: -2200px;
   padding: 0.5em;
-  transition: 2s ease;
+  transition: 1s ease;
   width: 90%;
 }
 
 .secaactive {
   left: 0;
-  transition: 2s ease;
+  transition: 1s ease;
 }
 
 /* Section B */
@@ -183,13 +196,13 @@ h1, h2, h3 {
   border-radius: 0 3em 3em 0;
   margin-left: -2200px;
   padding: 0.5em;
-  transition: 2s ease;
+  transition: 1s ease;
   width: 90%;
 }
 
 .secbactive {
   margin-left: 0;
-  transition: 2s ease;
+  transition: 1s ease;
 }
 
 /* Section C */
@@ -200,13 +213,13 @@ h1, h2, h3 {
   color: white;
   margin-left: -2200px;
   padding: 0.5em;
-  transition: 2s ease;
+  transition: 1s ease;
   width: 90%;
 }
 
 .seccactive {
   margin-left: 0;
-  transition: 2s ease;
+  transition: 1s ease;
 }
 
 /* Content bullet */
@@ -214,7 +227,7 @@ h1, h2, h3 {
 .bullet {
   opacity: 0;
   position: relative;
-  transition: 2s ease;
+  transition: 1s ease;
 }
 
 .bulletactive {

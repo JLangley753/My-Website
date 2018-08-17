@@ -21,10 +21,19 @@ function showDivs(n) {
 };
 
 window.onscroll = function() {
+  showWhatDo();
   secASlide();
   secBSlide();
   secCSlide();
   showBullet();
+};
+
+function showWhatDo() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    document.getElementById('whatwedo').className = "whatwedoactive";
+  } else {
+    document.getElementById('whatwedo').className = 'whatwedo';
+  }
 };
 
 function secASlide() {
