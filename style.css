@@ -188,7 +188,7 @@ h1, h2, h3 {
   background-color: #5c636e;
   border-radius: 0 3em 3em 0;
   color: white;
-  left: -2200px;
+  left: -750px;
   padding: 0.5em;
   transition: 3s ease;
   width: 90%;
@@ -204,7 +204,7 @@ h1, h2, h3 {
 .section-b {
   background-color: #f8b500;
   border-radius: 0 3em 3em 0;
-  margin-left: -2200px;
+  margin-left: -750px;
   padding: 0.5em;
   transition: 3s ease;
   width: 90%;
@@ -221,7 +221,7 @@ h1, h2, h3 {
   background-color: #5c636e;
   border-radius: 0 3em 3em 0;
   color: white;
-  margin-left: -2200px;
+  margin-left: -750px;
   padding: 0.5em;
   transition: 3s ease;
   width: 90%;
@@ -290,7 +290,7 @@ h1, h2, h3 {
 
 /* Media Queries */
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   .gallery {
     width: 45%;
     margin: 0 auto;
@@ -298,5 +298,12 @@ h1, h2, h3 {
   .bullet, .bulletactive {
     width: 60%;
     margin: 0 auto;
+  }
+  .section-a, .section-b, .section-c {
+    margin-left: -2200px;
+  }
+
+  .secaactive, .secbactive, .seccactive {
+    margin-left: 0;
   }
 }
