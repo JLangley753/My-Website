@@ -29,7 +29,7 @@ h1, h2, h3 {
 }
 
 .title {
-  width: 82%;
+  width: 80%;
 }
 
 .title h1 {
@@ -38,7 +38,7 @@ h1, h2, h3 {
 }
 
 .socialmediawrap {
-  width: 18%;
+  width: 20%;
 }
 
 .socialmedia {
@@ -50,10 +50,10 @@ h1, h2, h3 {
 }
 
 .socialmedia img {
-  height: 24px;
+  height: 28px;
   padding: 0;
   margin: 0;
-  width: 24px;
+  width: 28px;
 }
 
 .socialmedia img:hover {
