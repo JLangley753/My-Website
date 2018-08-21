@@ -42,7 +42,7 @@ h1, h2, h3 {
 }
 
 .socialmedia {
-  padding: 0.8em 0.8em;
+  padding: 0.4em 0.8em;
 }
 
 .socialmedia img {
@@ -275,15 +275,20 @@ h1, h2, h3 {
 
 .footer {
   background-color: #f8b500;
-  height: 150px;
   border-radius: 2.5em 0 0 0;
   margin: 2em 0 0 0;
+  padding: 1em 0.5em;
   text-align: center;
 }
 
 .footer p {
-  font-size: 0.8em;
-  padding: 1em;
+  font-size: 0.7em;
+  padding: 0.5em 0;
+}
+
+.footersocials img {
+  height: 36px;
+  width: 36px;
 }
 
 /* Media Queries */
