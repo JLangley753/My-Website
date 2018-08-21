@@ -47,7 +47,7 @@ function secASlide() {
 function secBSlide() {
   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
     document.getElementById('secBTab').className = "section-b tabs secbactive";
-  } /*else { 
+  } /*else {
     document.getElementById('secBTab').className = 'section-b tabs';
   }*/
 };

@@ -22,38 +22,34 @@ h1, h2, h3 {
 
 .header {
   background-color: #f8b500;
-  border-radius: 0 0 0.5em 0.5em;
-  display: flex;
+  border-radius: 0 0 2.5em 0;
+  display: block;
   text-align: center;
   width: 100%;
 }
 
 .title {
-  width: 82%;
+  text-align: center;
 }
 
 .title h1 {
   font-size: 1.6em;
-  padding: 0.5em;
+  padding: 0.8em;
+  margin: 0;
 }
 
 .socialmediawrap {
-  width: 18%;
 }
 
 .socialmedia {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-row-gap: 0;
-  padding: 1.5em 0.8em;
+  padding: 0.8em 0.8em;
 }
 
 .socialmedia img {
-  height: 24px;
+  height: 36px;
   padding: 0;
   margin: 0;
-  width: 24px;
+  width: 36px;
 }
 
 .socialmedia img:hover {
@@ -80,7 +76,7 @@ h1, h2, h3 {
   margin: 1em;
   padding: 0.3em 0.3em;
   position: relative;
-  border-radius: 0.5em;
+  border-radius: 0 1em;
 }
 
 .slideshow img {
@@ -160,7 +156,7 @@ h1, h2, h3 {
   display: block;
   position: relative;
   overflow-x: hidden !important;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
 }
 
 .tabs img {
@@ -187,7 +183,7 @@ h1, h2, h3 {
 
 .section-a {
   background-color: #5c636e;
-  border-radius: 0 3em 3em 0;
+  border-radius: 0 3em 0 0;
   color: white;
   left: -750px;
   padding: 0.5em;
@@ -204,7 +200,7 @@ h1, h2, h3 {
 
 .section-b {
   background-color: #f8b500;
-  border-radius: 0 3em 3em 0;
+  border-radius: 0;
   margin-left: -750px;
   padding: 0.5em;
   transition: 3s ease;
@@ -220,9 +216,10 @@ h1, h2, h3 {
 
 .section-c {
   background-color: #5c636e;
-  border-radius: 0 3em 3em 0;
+  border-radius: 0 0 3em 0;
   color: white;
   margin-left: -750px;
+  margin-bottom: 2em;
   padding: 0.5em;
   transition: 3s ease;
   width: 90%;
@@ -247,7 +244,7 @@ h1, h2, h3 {
 }
 
 .bullettop {
-  border-radius: 3em 3em 0 0;
+  border-radius: 0 3em 0 0;
   background-color: #f8b500;
   margin: 0 3em;
   padding: 1em 3em;
@@ -261,7 +258,7 @@ h1, h2, h3 {
 }
 
 .bulletbottom {
-  border-radius: 0 0 3em 3em;
+  border-radius: 0 0 0 3em;
   background-color: #393e46;
   color: white;
   margin: 0 3em;
@@ -279,7 +276,7 @@ h1, h2, h3 {
 .footer {
   background-color: #f8b500;
   height: 150px;
-  border-radius: 0.5em 0.5em 0 0;
+  border-radius: 2.5em 0 0 0;
   margin: 2em 0 0 0;
   text-align: center;
 }
