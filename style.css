@@ -29,11 +29,7 @@ h1, h2, h3 {
 }
 
 .title {
-<<<<<<< HEAD
-  width: 80%;
-=======
   text-align: center;
->>>>>>> test-asymetrical
 }
 
 .title h1 {
@@ -43,10 +39,6 @@ h1, h2, h3 {
 }
 
 .socialmediawrap {
-<<<<<<< HEAD
-  width: 20%;
-=======
->>>>>>> test-asymetrical
 }
 
 .socialmedia {
@@ -54,17 +46,10 @@ h1, h2, h3 {
 }
 
 .socialmedia img {
-<<<<<<< HEAD
-  height: 28px;
-  padding: 0;
-  margin: 0;
-  width: 28px;
-=======
   height: 36px;
   padding: 0;
   margin: 0;
   width: 36px;
->>>>>>> test-asymetrical
 }
 
 .socialmedia img:hover {
@@ -124,9 +109,9 @@ h1, h2, h3 {
 
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 3s;
+  -webkit-animation-duration: 2s;
   animation-name: fade;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 @-webkit-keyframes fade {
