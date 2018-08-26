@@ -200,15 +200,27 @@ h1, h2, h3 {
   background-color: #5c636e;
   border-radius: 0 3em 0 0;
   color: white;
-  left: -750px;
   padding: 0.5em;
-  transition: 3s ease;
   width: 90%;
+  visibility: hidden;
 }
 
 .secaactive {
-  left: 0;
-  transition: 3s ease;
+  animation-name: slideleft;
+  -webkit-animation-name: slideleft;
+  animation-duration: 3s;
+  visibility: visible;
+}
+
+@keyframes slideleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 /* Section B */
@@ -216,15 +228,16 @@ h1, h2, h3 {
 .section-b {
   background-color: #f8b500;
   border-radius: 0;
-  margin-left: -750px;
   padding: 0.5em;
-  transition: 3s ease;
   width: 90%;
+  visibility: hidden;
 }
 
 .secbactive {
-  margin-left: 0;
-  transition: 3s ease;
+  animation-name: slideleft;
+  -webkit-animation-name: slideleft;
+  animation-duration: 3s;
+  visibility: visible;
 }
 
 /* Section C */
@@ -233,29 +246,54 @@ h1, h2, h3 {
   background-color: #5c636e;
   border-radius: 0 0 3em 0;
   color: white;
-  margin-left: -750px;
   margin-bottom: 2em;
   padding: 0.5em;
-  transition: 3s ease;
   width: 90%;
+  visibility: hidden;
 }
 
 .seccactive {
-  margin-left: 0;
-  transition: 3s ease;
+  animation-name: slideleft;
+  -webkit-animation-name: slideleft;
+  animation-duration: 3s;
+  visibility: visible;
 }
 
 /* Content bullet */
 
 .bullet {
-  opacity: 0;
+  visibility: hidden;
   position: relative;
-  transition: 3s ease;
 }
 
 .bulletactive {
-  opacity: 1;
-  transition: 4s ease;
+  animation-name: slideup;
+  -webkid-animation-name: slideup;
+  animation-duration: 3s;
+  -webkid-animation-duration: 1s;
+  visibility: visible;
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slideup {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
 }
 
 .bullettop {
