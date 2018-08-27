@@ -52,7 +52,7 @@ h1, h2, h3 {
   width: 36px;
 }
 
-.socialmedia img:hover {
+.socialmedia a:hover {
   opacity: 0.65;
   transition: 0.3s ease-in-out;
 }
@@ -329,12 +329,39 @@ h1, h2, h3 {
   width: 36px;
 }
 
+.footersocials a:hover {
+  opacity: 0.65;
+  transition: 0.3s ease-in-out;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {
+  .header {
+  }
+  .title {
+  }
+  .socialmediawrap {
+    position: absolute;
+    padding: 0.5em;
+    top: 0;
+    right: 0;
+  }
+  .intro {
+  }
   .gallery {
     width: 45%;
     margin: 0 auto;
+  }
+  .tabs {
+    padding: 1em 3em;
+    width: 80%;
+  }
+  .tabs img {
+    width: 20%;
+  }
+  .section-c {
+    margin-bottom: 2em;
   }
   .bullet, .bulletactive {
     width: 60%;
