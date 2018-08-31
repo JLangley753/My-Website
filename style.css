@@ -38,8 +38,7 @@ h1, h2, h3 {
   margin: 0;
 }
 
-.socialmediawrap {
-}
+.socialmediawrap {}
 
 .socialmedia {
   padding: 0.4em 0.8em;
@@ -52,9 +51,14 @@ h1, h2, h3 {
   width: 36px;
 }
 
+.socialmedia a {
+  opacity: 1;
+  transition: 0.3s;
+}
+
 .socialmedia a:hover {
   opacity: 0.65;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
 /* Intro */
@@ -305,7 +309,59 @@ h1, h2, h3 {
 
 /* Contact Us */
 
+.formItem {
+  padding: 0.5em 0;
+}
+
+.formbox {
+  background-color: #f7f7f7;
+  border: 0.1px solid #393e46;
+  color: #393e46;
+  border-radius: 0 0 0.5em 0;
+  font-size: 0.9em;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  width: 90%;
+}
+
+.howicanhelp {
+  background-color: #f7f7f7;
+  border: 0.1px solid #393e46;
+  border-radius: 0 0 0.5em 0;
+  color: #393e46;
+  font-family: Helvetica, sans-serif;
+  font-size: 0.9em;
+  height: 4em;
+  padding: 0.5em;
+  resize: none;
+  width: 90%;
+}
+
+.submitbutton {
+  background-color: #f7f7f7;
+  border: 0.1px solid #393e46;
+  border-radius: 0 0 0.5em 0;
+  color: #393e46;
+  font-family: Helvetica;
+  font-size: 0.9em;
+  margin: 0 1em 0 0;
+  padding: 0.5em;
+  transition: 0.3s;
+  width: 50%;
+}
+
+.submitbutton:hover {
+  background-color: #393e46;
+  background-color: #f7f7f7;
+  transition: 0.3s;
+}
+
 /* Section D */
+
+.imagegrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
 /* About Me */
 
@@ -329,48 +385,48 @@ h1, h2, h3 {
   width: 36px;
 }
 
+.footersocials a {
+  transition: 0.3s;
+}
+
 .footersocials a:hover {
   opacity: 0.65;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
 /* Media Queries */
 
 @media (min-width: 768px) {
-  .header {
-  }
-  .title {
-  }
+  .header {}
+  .title {}
   .socialmediawrap {
     position: absolute;
     padding: 0.5em;
     top: 0;
     right: 0;
   }
-  .intro {
-  }
+  .intro {}
   .gallery {
-    width: 45%;
+    width: 50%;
     margin: 0 auto;
   }
   .tabs {
-    padding: 1em 3em;
-    width: 80%;
+    padding: 0.5em 2em;
+    width: 75%;
   }
   .tabs img {
-    width: 20%;
+    width: 25%;
   }
   .section-c {
     margin-bottom: 2em;
   }
   .bullet, .bulletactive {
-    width: 60%;
+    width: 75%;
     margin: 0 auto;
   }
   .section-a, .section-b, .section-c {
     margin-left: -2200px;
   }
-
   .secaactive, .secbactive, .seccactive {
     margin-left: 0;
   }

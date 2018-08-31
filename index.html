@@ -67,18 +67,40 @@
   <div class="bullet" id="bullet">
     <div class="contactus bullettop">
       <h3>Contact me here..</h3>
-      <p>quis legam veniam esse amet enim cillum labore tamen cillum eram irure elit illum export malis noster legam eram sint</p>
+      <form action="email.php">
+        <!--<div class="formItem">Your name:</div>-->
+        <input class="formbox" type="text" name="name" placeholder="Your name.." br>
+        <!--<div class="formItem">Your contact details:</div>-->
+        <input class="formbox" type="text" name="contact" placeholder="Your email..">
+        <!--<div class="formItem">Tell me how I can help:</div>-->
+        <textarea name="howicanhelp" class="formbox howicanhelp" cols="10" rows="4" placeholder="Tell me how I can help.."></textarea>
+        <input type="submit" value="Submit" class="submitbutton">
+      </form>
     </div>
 
     <div class="section-d bulletmiddle">
       <h3>What I can do</h3>
-      <p>I have experience with all main front end languages, HTML, CSS and JavaScript. I also have a keen eye for design and I know the importance of creating an accessible and beautiful user interface on every device.
-      </p>
+      <div class="imagegrid">
+        <div class="htmlgrid">
+          <h3>5</h3>
+          <p>HTML</p>
+        </div>
+        <div class="cssgrid">
+          <h3>3</h3>
+          <p>CSS</p>
+        </div>
+        <div class="jsgrid">
+          <h3>JS</h3>
+          <p>Vanilla JavaScript, jQuery, AngularJS</p>
+        </div>
+      </div>
+      <p>I have experience with all main front end languages, HTML, CSS and JavaScript. I also have a keen eye for design and I know the importance of creating an accessible and beautiful user interface on every device.</p>
     </div>
 
     <div class="aboutme bulletbottom">
       <h3>Who I am</h3>
-      <p>labore anim culpa sint duis aliqua anim dolor ipsum nisi aute fore illum legam illum nisi export aute nulla veniam</p>
+      <img src="" alt="">
+      <p>I'm Joe! I'm a 25 year old web developer from West London. </p>
     </div>
   </div>
 
