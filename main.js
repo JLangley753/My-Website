@@ -12,3 +12,27 @@ function openMenu() {
   bar2.classList.toggle('changebar2');
   bar3.classList.toggle('changebar3');
 };
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+window.onscroll = function() {stickyNav()};
+
+var navbar = document.getElementById('navbar');
+
+var sticky = navbar.offsetTop;
+
+function stickyNav() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add('stickynav')
+  } else {
+    navbar.classList.remove('stickynav');
+  }
+}

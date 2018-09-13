@@ -25,6 +25,7 @@ h1, h2, h3 {
   background-repeat: no-repeat;
   background-size: cover;
   font-weight: 100;
+  z-index: -1;
 }
 
 .head {
@@ -34,6 +35,18 @@ h1, h2, h3 {
   justify-content: space-between;
   text-align: center;
   width: 100%;
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+  z-index: 3;
+}
+
+.stickynav {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 }
 
 .littlejoe {
@@ -67,20 +80,23 @@ h1, h2, h3 {
 }
 
 .changebar1 {
-    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-    transform: rotate(-45deg) translate(-6px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
 }
 
-.changebar2 {opacity: 0;}
+.changebar2 {
+  opacity: 0;
+}
 
 .changebar3 {
-    -webkit-transform: rotate(45deg) translate(-6px, -8px);
-    transform: rotate(45deg) translate(-6px, -8px);
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
 }
 
 .dropdownmenuwrap {
   opacity: 0;
   transition: ease 0.5s;
+  z-index: 2;
 }
 
 .ddshow {
@@ -94,12 +110,19 @@ h1, h2, h3 {
   position: absolute;
   text-align: center;
   width: 100%;
+  z-index: 10;
+}
+
+.dropdownmenu a {
+  color: #f7f7f7;
+  text-decoration: none;
 }
 
 .projects, .contact, .about {
   color: #f7f7f7;
   margin: 5px;
   padding: 0px;
+  text-decoration: none;
 }
 
 .socialmediawrap {
@@ -302,18 +325,10 @@ h1, h2, h3 {
 /* Media Queries */
 
 @media (min-width: 768px) {
-  .head {
-
-  }
-  .title {
-
-  }
-  .socialmediawrap {
-
-  }
-  .intro {
-
-  }
+  .head {}
+  .title {}
+  .socialmediawrap {}
+  .intro {}
   .gallery {
     width: 50%;
     margin: 0 auto;
