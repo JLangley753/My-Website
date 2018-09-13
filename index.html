@@ -6,14 +6,32 @@
   <meta name="viewport" content="width=device-width" , initial-scale="1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  <title>Joe Langley Web Design</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+  <title>Joe Langley</title>
 </head>
 
 <body>
-
-  <div class="header">
-    <div class="title">
-      <h1>Joe Langley Web Design</h1>
+  <div class="backgroundimage">
+  <div class="head">
+    <div class="littlejoe">
+      <img src="/assets/img/littlejoe.JPG" alt="">
+    </div>
+    <button class="burgermenu" id="burgermenu">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </button>
+  </div>
+  <div class="dropdownmenuwrap" id="dropdown">
+    <div class="dropdownmenu">
+      <div class="projects">
+        <h2>Projects</h2>
+      </div>
+      <div class="contact">
+        <h2>Contact</h2>
+      </div>
+      <div class="about">
+        <h2>About<h2>
     </div>
     <div class="socialmediawrap">
       <div class="socialmedia">
@@ -23,25 +41,13 @@
         <a href="https://twitter.com/" target="_blank"><img src="/assets/img/tw.png" alt="Twitter"></a>
       </div>
     </div>
-  </div>
-
-  <div class="intro content-wrap">
-    <h2>I'm Joe and I love getting your ideas and local business on the map. Take a look at some of my work below.</h2>
-  </div>
-
-  <div class="gallery content-wrap">
-    <div class="slideshow">
-      <button type="image" src="/assets/img/left.png" class="leftarrow" onclick="plusDivs(-1)">&#10094;</button>
-      <button type="image" src="/assets/img/right.png" class="rightarrow" onclick="plusDivs(+1)">&#10095;</button>
-      <img src="/assets/img/joecafedesk.png" class="mySlides fade">
-      <img src="/assets/img/boxadesk.png" class="mySlides fade">
-      <img src="/assets/img/academdesk.png" class="mySlides fade">
     </div>
   </div>
 
-  <div id="whatwedo" class="whatwedo">
-    <h2>This is how I can help you..</h2>
+ <div class="intro content-wrap">
+    <h2>I'm Joe, and I create fun, unique and beautiful websites.</h2>
   </div>
+</div>
 
   <div class="section-a tabs" id="secATab">
     <h3>Web design and development</h3>
@@ -68,39 +74,22 @@
     <div class="contactus bullettop">
       <h3>Contact me here..</h3>
       <form action="email.php">
-        <!--<div class="formItem">Your name:</div>-->
         <input class="formbox" type="text" name="name" placeholder="Your name.." br>
-        <!--<div class="formItem">Your contact details:</div>-->
         <input class="formbox" type="text" name="contact" placeholder="Your email..">
-        <!--<div class="formItem">Tell me how I can help:</div>-->
         <textarea name="howicanhelp" class="formbox howicanhelp" cols="10" rows="4" placeholder="Tell me how I can help.."></textarea>
         <input type="submit" value="Submit" class="submitbutton">
       </form>
     </div>
 
     <div class="section-d bulletmiddle">
-      <h3>What I can do</h3>
-      <div class="imagegrid">
-        <div class="htmlgrid">
-          <h3>5</h3>
-          <p>HTML</p>
-        </div>
-        <div class="cssgrid">
-          <h3>3</h3>
-          <p>CSS</p>
-        </div>
-        <div class="jsgrid">
-          <h3>JS</h3>
-          <p>Vanilla JavaScript, jQuery, AngularJS</p>
-        </div>
-      </div>
-      <p>I have experience with all main front end languages, HTML, CSS and JavaScript. I also have a keen eye for design and I know the importance of creating an accessible and beautiful user interface on every device.</p>
+      <h3>Section D</h3>
+      <p>labore tamen quem quem dolore culpa veniam nulla esse elit magna tamen illum sint illum fore labore anim malis export esse enim quem sint nisi nulla malis malis tamen anim</p>
     </div>
 
     <div class="aboutme bulletbottom">
       <h3>Who I am</h3>
-      <img src="" alt="">
-      <p>I'm Joe! I'm a 25 year old web developer from West London. </p>
+      <img src="/assets/img/me.JPG" alt="">
+      <p>I'm Joe! I'm a 25 year old web developer from West London. My passion is</p>
     </div>
   </div>
 
@@ -116,7 +105,6 @@
 
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <script src="main.js"></script>
 
 </html>
