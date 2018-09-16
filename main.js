@@ -1,17 +1,17 @@
 var bm = document.getElementById('burgermenu');
 var dd = document.getElementById('dropdown');
-var bar1 = document.querySelector('.bar1');
-var bar2 = document.querySelector('.bar2');
-var bar3 = document.querySelector('.bar3');
 
-bm.onclick = openMenu;
+var bars = document.getElementsByClassName('bar');
+var barsArray = [].slice.call(bars);
+
+bm.onclick = openMenu
 
 function openMenu() {
-  dd.classList.toggle('ddshow'); //Toggles dropdown menu
-  bar1.classList.toggle('changebar1');
-  bar2.classList.toggle('changebar2');
-  bar3.classList.toggle('changebar3');
-};
+  dd.classList.toggle('ddshow');
+  for (var i = 0; i < barsArray.length; i++) {
+    barsArray[i].classList.toggle('changebar' + [i+1]);
+  }
+}
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
@@ -23,11 +23,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+/* Disused for the time being
+
 window.onscroll = function() {stickyNav()};
 
+ var navbarswitch = document.getElementById('navbarswitch');
 var navbar = document.getElementById('navbar');
 
-var sticky = navbar.offsetTop;
+var sticky = navbarswitch.offsetTop
 
 function stickyNav() {
   if (window.pageYOffset >= sticky) {
@@ -36,3 +39,5 @@ function stickyNav() {
     navbar.classList.remove('stickynav');
   }
 }
+
+*/
