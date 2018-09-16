@@ -53,6 +53,7 @@ body {
   display: block;
   margin: 0;
   padding: 8px 8px 4px 8px;
+  z-index: 20;
 }
 
 .littlejoe img {
@@ -72,6 +73,7 @@ body {
 .burgermenu {
   background-color: transparent;
   border: 0;
+  cursor: pointer;
   outline: none;
   margin: auto 10px;
 }
@@ -104,7 +106,7 @@ body {
 
 /* Drop down menu */
 
-.dropdownmenu {
+.dropdownmenumob {
   background: rgba(17, 45, 78, 0.3);
   opacity: 0;
   overflow: none;
@@ -114,6 +116,10 @@ body {
   width: 100%;
   visibility: hidden;
   z-index: 10;
+}
+
+.dropdownmenubig {
+  visibility: hidden;
 }
 
 .changedd {
@@ -127,7 +133,7 @@ body {
   visibility: visible;
 }
 
-.dropdownmenu a {
+.dropdownmenumob a {
   color: #f7f7f7;
   text-decoration: none;
 }
@@ -214,8 +220,8 @@ body {
 
 .formbox {
   background-color: #f7f7f7;
-  border: 0.1px solid #393e46;
-  color: #393e46;
+  border: 0.1px solid #112d4e;
+  color: #112d4e;
   font-size: 0.9em;
   margin: 5px 0;
   padding: 8px;
@@ -224,8 +230,8 @@ body {
 
 .howicanhelp {
   background-color: #f7f7f7;
-  border: 0.1px solid #393e46;
-  color: #393e46;
+  border: 0.1px solid #112d4e;
+  color: #112d4e;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 0.9em;
@@ -237,8 +243,8 @@ body {
 
 .submitbutton {
   background-color: #f7f7f7;
-  border: 0.1px solid #393e46;
-  color: #393e46;
+  border: 0.1px solid #112d4e;
+  color: #112d4e;
   font-weight: 300;
   font-size: 0.9em;
   margin: 0 15px 0 0;
@@ -248,7 +254,7 @@ body {
 }
 
 .submitbutton:hover {
-  background-color: #393e46;
+  background-color: #112d4e;
   background-color: #f7f7f7;
   transition: 0.3s;
 }
@@ -292,33 +298,48 @@ body {
 /* Media Queries */
 
 @media (min-width: 768px) {
-  .head {}
-  .title {}
-  .socialmediawrap {}
-  .intro {}
-  .gallery {
-    width: 50%;
-    margin: 0 auto;
+  .burgermenu {
+    display: none;
+    visibility: hidden;
   }
-  .tabs {
-    padding: 0.5em 2em;
-    width: 75%;
+  .dropdownmenubig {
+    justify-content: flex-end;
+    position: fixed;
+    display: flex;
+    height: 58px;
+    top: 0;
+    visibility: visible;
+    width: 100%;
   }
-  .tabs img {
-    width: 25%;
+  .dropdownmenubig a {
+    color: #f7f7f7;
+    text-decoration: none;
   }
-  .section-c {
-    margin: auto;
-    margin-bottom: 2em;
+  .projects, .contact, .about {
+    font-size: 1em;
+    padding: 0 5px;
+    transition: 0.5s ease-in-out;
   }
-  .bullet, .bulletactive {
-    width: 75%;
-    margin: 1em auto;
+  .pca {
+    margin: 20px 5px;
+    transition: 0.5s ease-in-out;
   }
-  .section-a, .section-b, .section-c {
-    margin: auto;
+  .changepca {
+    margin: 10px 5px;
+    transition: 0.5s ease-in-out;
   }
-  .secaactive, .secbactive, .seccactive {
-    margin: auto;
+  .socialmediawrapbig {
+    margin: 16px;
+    transition: 0.5s ease-in-out;
+  }
+  .smallsmwd {
+    margin: 5px;
+    transition: 0.5s ease-in-out;
+  }
+  .content {
+    margin: 30px 180px;
+  }
+  .aboutme img {
+    width: 350px;
   }
 }

@@ -1,5 +1,5 @@
 var bm = document.getElementById('burgermenu');
-var dd = document.getElementById('dropdown');
+var dd = document.getElementById('dropdownmob');
 
 var bars = document.getElementsByClassName('bar');
 var barsArray = [].slice.call(bars);
@@ -29,6 +29,10 @@ window.onscroll = function() {solidBar()};
 var navbarswitch = document.getElementById('navbarswitch');
 var topbar = document.getElementById('topbar');
 var joe = document.getElementById('joe');
+var sm = document.getElementById('smwd');
+
+var pcaItems = document.getElementsByClassName('pca');
+var pcaArray = [].slice.call(pcaItems);
 
 var solid = navbarswitch.offsetTop;
 
@@ -37,9 +41,16 @@ function solidBar() {
     topbar.classList.add('solidnav')
     dd.classList.add('changedd')
     joe.classList.add('amendedjoe')
+    sm.classList.add('smallsmwd');
+    for (var j = 0; j < pcaArray.length; j++) {
+      pcaArray[j].classList.add('changepca');
+    }
   } else {
     topbar.classList.remove('solidnav')
     dd.classList.remove('changedd');
     joe.classList.remove('amendedjoe');
+    sm.classList.remove('smallsmwd');    for (var j = 0; j < pcaArray.length; j++) {
+          pcaArray[j].classList.remove('changepca');
+        }
   }
 }
