@@ -13,9 +13,9 @@
 <body>
   <div class="header">
     <div id="toppage"></div>
-    <div class="navbar" id="navbar">
-      <div class="topbar">
-        <div class="littlejoe">
+    <div class="navbar">
+      <div class="topbar" id="topbar">
+        <div class="littlejoe" id="joe">
           <a href="#toppage"><img src="/assets/img/littlejoe.JPG" alt=""></a>
         </div>
         <button class="burgermenu" id="burgermenu">
@@ -26,7 +26,7 @@
       </div>
       <div class="dropdownmenu" id="dropdown">
         <div class="projects">
-          <a href="#secATab"><h2>Projects</h2></a>
+          <a href="#projectsSec"><h2>Projects</h2></a>
         </div>
         <div class="contact">
           <a href="#contact"><h2>Contact</h2></a>
@@ -44,60 +44,45 @@
         </div>
       </div>
     </div>
-    <!-- <div class="navbarswitch" id="navbarswitch">switch</div> Not used for now -->
+    <div class="navbarswitch" id="navbarswitch"></div>
     <div class="intro" id="intro">
       <h2>I'm Joe, and I create fun, unique and beautiful websites.</h2>
     </div>
   </div>
 
-  <div class="pagebar" id="pagebar"></div>
+  <div class="pagebar content" id="pagebar"></div>
 
-  <div class="section-a tabs" id="secATab">
-    <h3>Web design and development</h3>
-    <div class="tab-content">
-      <p><img src="/assets/img/webdev.jpeg" alt="">I design and make beautiful, clean websites that perform well, look good and are unique to you and your business.</p>
+  <div class="projectsSec content" id="projectsSec">
+    <h2>My projects</h2>
+    <div class="projectsgrid">
+      <div class="spinnerapp">spinner</div>
+      <div class="cafejoe">cafe</div>
     </div>
   </div>
 
-  <div class="section-b tabs" id="secBTab">
-    <h3>Multi platform websites</h3>
-    <div class="tab-content">
-      <p><img src="/assets/img/devices.jpeg" alt="">You can guarantee that your website will be built from the ground up to look great on any device.</p>
-    </div>
+  <div class="pagebar content" id="pagebar"></div>
+
+  <div class="contactus content" id="contact">
+    <h2>Contact me here..</h2>
+    <form action="email.php">
+      <input class="formbox" type="text" name="name" placeholder="Your name.." br>
+      <input class="formbox" type="text" name="contact" placeholder="Your email..">
+      <textarea name="howicanhelp" class="formbox howicanhelp" cols="10" rows="4" placeholder="Tell me how I can help.."></textarea>
+      <input type="submit" value="Submit" class="submitbutton">
+    </form>
   </div>
 
-  <div class="section-c tabs" id="secCTab">
-    <h3>Premium client support</h3>
-    <div class="tab-content">
-      <p><img src="/assets/img/support.jpeg" alt="">You can say goodbye to call centers, I'm available to help you with any queries you may have before, during and after the website is online.</p>
-    </div>
-  </div>
+  <div class="pagebar content" id="pagebar"></div>
 
-  <div class="bullet" id="bullet">
-    <div class="contactus bullettop" id="contact">
-      <h3>Contact me here..</h3>
-      <form action="email.php">
-        <input class="formbox" type="text" name="name" placeholder="Your name.." br>
-        <input class="formbox" type="text" name="contact" placeholder="Your email..">
-        <textarea name="howicanhelp" class="formbox howicanhelp" cols="10" rows="4" placeholder="Tell me how I can help.."></textarea>
-        <input type="submit" value="Submit" class="submitbutton">
-      </form>
-    </div>
-
-    <!--  <div class="section-d bulletmiddle">
-          <h3>Section D</h3>
-          <p>labore tamen quem quem dolore culpa veniam nulla esse elit magna tamen illum sint illum fore labore anim malis export esse enim quem sint nisi nulla malis malis tamen anim</p>
-        </div> -->
-
-    <div class="aboutme bulletbottom" id="aboutme">
-      <h3>Who I am</h3>
-      <img src="/assets/img/me.JPG" alt="">
-      <p>I'm Joe! I'm a 25 year old web developer from West London. My passion is</p>
-    </div>
+  <div class="aboutme content" id="aboutme">
+    <h2>Who I am</h2>
+    <img src="/assets/img/me.JPG" alt="">
+    <p>My name is Joe Langley, and I'm a 25 year old web developer from West London. I love to create websites from scratch that look great and respond well on all devices.</p>
+    <p>Aside from web development, I love travel, food, music and football!</p>
   </div>
 
   <div class="footer">
-    <p>This website was designed and created by Joe Langley Web Design</p>
+    <p>This website was designed and created by Joe Langley</p>
     <div class="footersocials">
       <a href="https://github.com/JLangley753" target="_blank"><img src="/assets/img/gh.png" alt="GitHub"></a>
       <a href="https://www.linkedin.com/in/joelangley7/" target="_blank"><img src="/assets/img/li.png" alt="LinkedIn"></a>

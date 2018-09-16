@@ -23,21 +23,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-/* Disused for the time being
 
-window.onscroll = function() {stickyNav()};
+window.onscroll = function() {solidBar()};
 
- var navbarswitch = document.getElementById('navbarswitch');
-var navbar = document.getElementById('navbar');
+var navbarswitch = document.getElementById('navbarswitch');
+var topbar = document.getElementById('topbar');
+var joe = document.getElementById('joe');
 
-var sticky = navbarswitch.offsetTop
+var solid = navbarswitch.offsetTop;
 
-function stickyNav() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add('stickynav')
+function solidBar() {
+  if (window.pageYOffset >= solid) {
+    topbar.classList.add('solidnav')
+    dd.classList.add('changedd')
+    joe.classList.add('amendedjoe')
   } else {
-    navbar.classList.remove('stickynav');
+    topbar.classList.remove('solidnav')
+    dd.classList.remove('changedd');
+    joe.classList.remove('amendedjoe');
   }
 }
-
-*/
