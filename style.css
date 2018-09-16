@@ -140,6 +140,7 @@ body {
 
 .projects, .contact, .about {
   color: #f7f7f7;
+  font-weight: 100;
   margin: 5px;
   padding: 0px;
   text-decoration: none;
@@ -184,6 +185,7 @@ body {
 }
 
 .intro h2 {
+  font-weight: 100;
   padding: 300px 0;
   text-align: center;
 }
@@ -330,6 +332,7 @@ transition: 0.3s ease-in-out;
     transition: 0.5s ease-in-out;
   }
   .pca {
+    font-weight: 100;
     margin: 20px 5px;
     transition: 0.5s ease-in-out;
   }
@@ -344,6 +347,9 @@ transition: 0.3s ease-in-out;
   .smallsmwd {
     margin: 5px;
     transition: 0.5s ease-in-out;
+  }
+  .intro h2 {
+    padding: 450px 0;
   }
   .content {
     margin: 30px 300px;
