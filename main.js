@@ -58,6 +58,7 @@ function solidBar() {
   }
 }
 
+
 var projIndex = 1;
 showProj(projIndex);
 
@@ -70,11 +71,17 @@ function currentProj(n) {
 }
 
 function showProj(n) {
-  var projects = document.getElementsByClassName('projectcard');
-  if (n > projects.length) {projIndex = 1}
-  if (n < 1) {projIndex = projects.length}
-  for (var k = 0; k < projects.length; k++) {
-    projects[k].style.display = "none";
-  }
-  projects[projIndex-1].style.display = "block";
+    var projects = document.getElementsByClassName('projectcard');
+    if (n > projects.length) {
+      projIndex = 1
+    }
+    if (n < 1) {
+      projIndex = projects.length
+    }
+    for (var k = 0; k < projects.length; k++) {
+      projects[k].classList.add('deactivecard');
+      projects[k].classList.remove('activecard');
+    }
+    projects[projIndex - 1].classList.remove('deactivecard');
+    projects[projIndex - 1].classList.add('activecard');
 }

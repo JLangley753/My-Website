@@ -259,7 +259,15 @@ body {
   border-radius: 5px;
   height: 400px;
   padding: 5px 10px;
-  width: 300px;
+  width: 210px;
+}
+
+.activecard {
+  display: block;
+}
+
+.deactivecard {
+  display: none;
 }
 
 .fade {
@@ -319,7 +327,7 @@ body {
   margin: 0 15px 0 0;
   padding: 5px;
   transition: 0.3s;
-  width: 50%;
+  width: 200px;
 }
 
 .submitbutton:hover {
@@ -335,6 +343,13 @@ body {
   width: 100%;
 }
 
+.aboutme p {
+}
+
+.aboutme {
+  position: relative;
+  min-height: 200px;
+}
 /* Footer */
 
 .footer {
@@ -416,9 +431,24 @@ body {
     font-size: 2em;
   }
   .content {
-    margin: 30px 300px;
+    margin: 30px 250px;
+  }
+  .projectsgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  .projectcard {
+    width: 210px;
+  }
+  .deactivecard {
+    display: block;
+  }
+  .arrow {
+    display: none;
   }
   .aboutme img {
-    width: 350px;
+    width: 200px;
   }
 }
