@@ -431,7 +431,7 @@ body {
     font-size: 2em;
   }
   .content {
-    margin: 30px 250px;
+    margin: 30px 200px;
   }
   .projectsgrid {
     display: grid;
@@ -448,7 +448,20 @@ body {
   .arrow {
     display: none;
   }
+  .aboutmewrap {
+    display: flex;
+    justify-content: center;
+  }
   .aboutme img {
-    width: 200px;
+    margin: 0 auto;
+    min-width: 270px;
+    max-width: 735px;
+  }
+  .aboutme p {
+    max-width: 735px;
+  }
+  .contactwrap {
+    display: flex;
+    justify-content: center;
   }
 }
