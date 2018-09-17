@@ -9,7 +9,7 @@ bm.onclick = openMenu
 function openMenu() {
   dd.classList.toggle('ddshow');
   for (var i = 0; i < barsArray.length; i++) {
-    barsArray[i].classList.toggle('changebar' + [i+1]);
+    barsArray[i].classList.toggle('changebar' + [i + 1]);
   }
 }
 
@@ -24,7 +24,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-window.onscroll = function() {solidBar()};
+window.onscroll = function() {
+  solidBar()
+};
 
 var navbarswitch = document.getElementById('navbarswitch');
 var topbar = document.getElementById('topbar');
@@ -49,8 +51,30 @@ function solidBar() {
     topbar.classList.remove('solidnav')
     dd.classList.remove('changedd');
     joe.classList.remove('amendedjoe');
-    sm.classList.remove('smallsmwd');    for (var j = 0; j < pcaArray.length; j++) {
-          pcaArray[j].classList.remove('changepca');
-        }
+    sm.classList.remove('smallsmwd');
+    for (var j = 0; j < pcaArray.length; j++) {
+      pcaArray[j].classList.remove('changepca');
+    }
   }
+}
+
+var projIndex = 1;
+showProj(projIndex);
+
+function projCardSwitcher(n) {
+  showProj(projIndex += n);
+}
+
+function currentProj(n) {
+  showProj(projIndex = n);
+}
+
+function showProj(n) {
+  var projects = document.getElementsByClassName('projectcard');
+  if (n > projects.length) {projIndex = 1}
+  if (n < 1) {projIndex = projects.length}
+  for (var k = 0; k < projects.length; k++) {
+    projects[k].style.display = "none";
+  }
+  projects[projIndex-1].style.display = "block";
 }

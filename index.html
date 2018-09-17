@@ -73,10 +73,41 @@
 
   <div class="projectsSec content" id="projectsSec">
     <h2>My projects</h2>
-    <div class="projectsgrid">
-      <div class="spinnerapp">spinner</div>
-      <div class="cafejoe">cafe</div>
-      <div class="otherproject1">other project</div>
+    <div class="projgridwrap">
+      <button class="leftArrow arrow" onclick="projCardSwitcher(-1)"><img src="/assets/img/leftarrow.png" alt=""></button>
+      <div class="projectsgrid">
+        <div class="spinnerapp projectcard project1">
+          <h3 class="fade">Spinner app</h3>
+          <div class="projectcardimg fade">
+            <img src="/assets/img/" alt="">
+          </div>
+          <div class="projectcardtxt fade">
+            <p>Languages: HTML, CSS, Javascript (React)</p>
+            <p>quem nulla elit esse esse aliqua cillum tempor eram malis enim quae velit quis eram malis magna enim nulla legam</p>
+          </div>
+        </div>
+        <div class="cafejoe projectcard project2">
+          <h3 class="fade">Cafe Joe website</h3>
+          <div class="projectcardimg fade">
+            <img src="" alt="">
+          </div>
+          <div class="projectcardtxt fade">
+            <p>Languages: HTML, CSS, Javascript</p>
+            <p>quae anim elit sint irure nulla aliqua elit anim sunt elit minim tempor quorum nisi magna summis aliqua export quem</p>
+          </div>
+        </div>
+        <div class="otherproject1 projectcard project3 ">
+          <h3 class="fade">Project title</h3>
+          <div class="projectcardimg fade">
+            <img src="" alt="">
+          </div>
+          <div class="projectcardtxt fade">
+            <p>Languages: HTML, CSS, Javascript</p>
+            <p>quae anim elit sint irure nulla aliqua elit anim sunt elit minim tempor quorum nisi magna summis aliqua export quem</p>
+          </div>
+        </div>
+      </div>
+      <button class="rightArrow arrow" onclick="projCardSwitcher(+1)"><img src="/assets/img/rightarrow.png" alt=""></button>
     </div>
   </div>
 
