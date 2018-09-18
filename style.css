@@ -191,8 +191,8 @@ body {
 }
 
 .pagebar {
-  padding: 0;
   border-top: 1px solid #112d4e;
+  padding: 0;
 }
 
 /* Content wrap */
@@ -203,8 +203,7 @@ body {
 
 /* Projects */
 
-.projectsSec {
-}
+.projectsSec {}
 
 .projectsSec h2 {
   color: #112d4e;
@@ -219,6 +218,7 @@ body {
   border: 0;
   font-size: 2em;
   height: 50px;
+  padding: 0 10px;
 }
 
 .arrow:focus {
@@ -227,7 +227,8 @@ body {
 
 .arrow img {
   height: 50px;
-  width: auto;
+  padding: 0;
+  width: 30px;
 }
 
 .leftArrow {
@@ -259,7 +260,28 @@ body {
   border-radius: 5px;
   height: 400px;
   padding: 5px 10px;
-  width: 210px;
+  width: 270px;
+}
+
+.projectcardimg {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.projectcardimg img {
+  width: 270px;
+}
+
+.projectcardtxt a {
+  color: #3f72af;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.projectcartxt a:hover {
+  color: #dbe2ef;
+  transition: 0.3s ease-in-out;
 }
 
 .activecard {
@@ -278,13 +300,20 @@ body {
 }
 
 @keyframes fade {
-  from {opacity: 0.1}
-  to {opacity: 1}
+  from {
+    opacity: 0.1
+  }
+  to {
+    opacity: 1
+  }
 }
 
 /* Contact Us */
 
 .contactus {}
+
+.contactwrap {
+}
 
 .formItem {
   padding: 50px 0;
@@ -339,17 +368,17 @@ body {
 /* About Me */
 
 .aboutme img {
-  border-radius: 10px;
+  border-radius: 5px;
   width: 100%;
 }
 
-.aboutme p {
-}
+.aboutme p {}
 
 .aboutme {
   position: relative;
   min-height: 200px;
 }
+
 /* Footer */
 
 .footer {
