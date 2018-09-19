@@ -1,44 +1,48 @@
-var bm = document.getElementById('burgermenu');
-var dd = document.getElementById('dropdownmob');
+// Open burger menu and play dropdown menu animation on click
 
-var bars = document.getElementsByClassName('bar');
-var barsArray = [].slice.call(bars);
+var bm = document.querySelector('.bm'); // burger menu
+var dd = document.querySelector('.dd'); // dropdowm menu
 
 bm.onclick = openMenu
 
 function openMenu() {
+  var bars = document.getElementsByClassName('bar');
+  var barsArray = [].slice.call(bars);
+  
   dd.classList.toggle('ddshow');
   for (var i = 0; i < barsArray.length; i++) {
     barsArray[i].classList.toggle('changebar' + [i + 1]);
   }
 }
 
+// Scroll to section on click
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
-
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     });
   });
 });
 
+// Change navbar appearance on scroll
 
 window.onscroll = function() {
   solidBar()
 };
 
-var navbarswitch = document.getElementById('navbarswitch');
-var topbar = document.getElementById('topbar');
-var joe = document.getElementById('joe');
-var sm = document.getElementById('smwd');
-
-var pcaItems = document.getElementsByClassName('pca');
-var pcaArray = [].slice.call(pcaItems);
-
-var solid = navbarswitch.offsetTop;
-
 function solidBar() {
+  var navbarswitch = document.querySelector('.navbarswitch');
+  var topbar = document.querySelector('.tb');
+  var joe = document.querySelector('.lj');
+  var sm = document.querySelector('.smwd');
+
+  var pcaItems = document.getElementsByClassName('pca');
+  var pcaArray = [].slice.call(pcaItems);
+
+  var solid = navbarswitch.offsetTop;
+
   if (window.pageYOffset >= solid) {
     topbar.classList.add('solidnav')
     dd.classList.add('changedd')
@@ -58,6 +62,7 @@ function solidBar() {
   }
 }
 
+// Slideshow arrow functions
 
 var projIndex = 1;
 showProj(projIndex);
