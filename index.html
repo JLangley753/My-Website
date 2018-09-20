@@ -25,7 +25,7 @@
           </div>
           <div class="about">
             <a href="#aboutme"><h2 class=pca>About<h2></a>
-            </div>
+          </div>
           <div class="contact">
             <a href="#contact"><h2 class="pca">Contact</h2></a>
           </div>
@@ -73,7 +73,7 @@
   <div class="pagebar content" id="pagebar"></div>
 
   <div class="projectsSec content" id="projectsSec">
-    <h2>My projects</h2>
+    <h2>Projects</h2>
     <div class="projgridwrap">
       <button class="leftArrow arrow" onclick="projCardSwitcher(-1)"><img src="/assets/img/leftarrow.png" alt=""></button>
       <div class="projectsgrid">
@@ -82,78 +82,79 @@
           <div class="projectcardimg fade">
             <img src="/assets/img/spinnerapp.png" alt="">
           </div>
-          <div class="projectcardtxt fade">
-            <p>Languages: HTML, CSS, Javascript (React)</p>
-            <p>A collaborative project, this spinner app uses the React framework to create an interactive game show style spinner wheel for my friends.</p>
-            <p><a href="https://github.com/Boxface/react-random-game-spinner" target="_blank">Click here</a> to find out more!</p>
+            <div class="projectcardtxt fade">
+              <p>Languages: HTML, CSS, Javascript (React)</p>
+              <p>A collaborative project, this spinner app uses the React framework to create an interactive game show style spinner wheel for my friends.</p>
+              <p><a href="https://github.com/Boxface/react-random-game-spinner" target="_blank">Click here</a> to find out more!</p>
+            </div>
+          </div>
+          <div class="cafejoe projectcard project2">
+            <h3 class="fade">Cafe Joe</h3>
+            <div class="projectcardimg fade">
+              <img src="/assets/img/joescafe.png" alt="">
+          </div>
+              <div class="projectcardtxt fade">
+                <p>Languages: HTML, CSS, Javascript</p>
+                <p>One of my first websites, complete with an automatic slideshow of images and responsive design all over.</p>
+                <p><a href="https://github.com/JLangley753/Cafe-Template-02.08.18" target="_blank">Click here</a> to find out more!</p>
+              </div>
+            </div>
+            <div class="otherproject1 projectcard project3">
+              <h3 class="fade">Academic Film & TV</h3>
+              <div class="projectcardimg fade">
+                <img src="/assets/img/academicfilmandtv.png" alt="">
+          </div>
+                <div class="projectcardtxt fade">
+                  <p>Languages: HTML, CSS, Javascript, PHP</p>
+                  <p>A project for my father's business, Academic Film & TV was built with a mobile first approach and features a sign-up newsletter form.</p>
+                  <p><a href="https://github.com/JLangley753/Academic-Film-and-TV-29.07.18" target="_blank">Click here</a> to find out more!</p>
+                </div>
+              </div>
+            </div>
+            <button class="rightArrow arrow" onclick="projCardSwitcher(+1)"><img src="/assets/img/rightarrow.png" alt=""></button>
           </div>
         </div>
-        <div class="cafejoe projectcard project2">
-          <h3 class="fade">Cafe Joe</h3>
-          <div class="projectcardimg fade">
-            <img src="/assets/img/joescafe.png" alt="">
-          </div>
-          <div class="projectcardtxt fade">
-            <p>Languages: HTML, CSS, Javascript</p>
-            <p>One of my first websites, complete with an automatic slideshow of images and responsive design all over.</p>
-            <p><a href="https://github.com/JLangley753/Cafe-Template-02.08.18" target="_blank">Click here</a> to find out more!</p>
-          </div>
-        </div>
-  <div class="otherproject1 projectcard project3">
-          <h3 class="fade">Academic Film & TV</h3>
-          <div class="projectcardimg fade">
-            <img src="/assets/img/academicfilmandtv.png" alt="">
-          </div>
-          <div class="projectcardtxt fade">
-            <p>Languages: HTML, CSS, Javascript, PHP</p>
-            <p>A project for my father's business, Academic Film & TV was built with a mobile first approach and features a sign-up newsletter form.</p>
-            <p><a href="https://github.com/JLangley753/Academic-Film-and-TV-29.07.18" target="_blank">Click here</a> to find out more!</p>
+
+        <div class="pagebar content" id="pagebar"></div>
+
+        <div class="aboutme content" id="aboutme">
+          <h2>About</h2>
+          <div class="aboutmewrap">
+            <div class="aboutmesection">
+              <img src="/assets/img/me.JPG" alt="">
+              <p>My name is Joe Langley, and I'm a 25 year old web developer from West London. I love to create websites from scratch that look great and respond well on all devices.</p>
+              <p>At the moment, I am available to make bespoke websites for small businesses.</p>
+              <p>Aside from web development, I love travel, food, music and football!</p>
+              <p>If you like what you hear and see, drop me a message in the box below.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <button class="rightArrow arrow" onclick="projCardSwitcher(+1)"><img src="/assets/img/rightarrow.png" alt=""></button>
-    </div>
-  </div>
 
-  <div class="pagebar content" id="pagebar"></div>
+        <div class="pagebar content" id="pagebar"></div>
 
-  <div class="aboutme content" id="aboutme">
-    <h2>About me</h2>
-    <div class="aboutmewrap">
-      <div class="aboutmesection">
-        <img src="/assets/img/me.JPG" alt="">
-        <p>My name is Joe Langley, and I'm a 25 year old web developer from West London. I love to create websites from scratch that look great and respond well on all devices.</p>
-        <p>Aside from web development, I love travel, food, music and football!</p>
-        <p>If you like what you hear and see, drop me a message in the box below.</p>
-      </div>
-    </div>
-  </div>
+        <div class="contactus content" id="contact">
+          <h2>Contact</h2>
+          <div class="contactwrap">
+            <div class="contactformsection">
+              <form action="email.php" method="post">
+                <input class="formbox" type="text" name="name" placeholder="Your name..">
+                <input class="formbox" type="text" name="mail" placeholder="Your email..">
+                <textarea name="howicanhelp" class="formbox howicanhelp" cols="10" rows="4" placeholder="Let's chat.."></textarea>
+                <button type="submit" value="Submit" name="submit" class="submitbutton">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
 
-  <div class="pagebar content" id="pagebar"></div>
-
-  <div class="contactus content" id="contact">
-    <h2>Contact me here</h2>
-    <div class="contactwrap">
-      <div class="contactformsection">
-        <form action="email.php" method="post">
-          <input class="formbox" type="text" name="name" placeholder="Your name.."><span class="error"><?php echo $nameErr;?></span>
-          <input class="formbox" type="text" name="mail" placeholder="Your email.."><span class="error"><?php echo %mailFromErr;?></span>
-          <textarea name="howicanhelp" class="formbox howicanhelp" cols="10" rows="4" placeholder="Let's chat.."></textarea>
-          <button type="submit" value="Submit" name="submit" class="submitbutton">Submit</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer">
-    <p>This website was designed and created by <a href="#toppage">Joe Langley</a></p>
-    <div class="footersocials">
-      <a href="https://github.com/JLangley753" target="_blank"><img src="/assets/img/gh.png" alt="GitHub"></a>
-      <a href="https://www.linkedin.com/in/joelangley7/" target="_blank"><img src="/assets/img/li.png" alt="LinkedIn"></a>
-      <a href="https://www.instagram.com/" target="_blank"><img src="/assets/img/ig.png" alt="Instagram"></a>
-      <a href="https://twitter.com/" target="_blank"><img src="/assets/img/tw.png" alt="Twitter"></a>
-    </div>
-  </div>
+        <div class="footer">
+          <p>This website was designed and created by <a href="#toppage">Joe Langley</a></p>
+          <div class="footersocials">
+            <a href="https://github.com/JLangley753" target="_blank"><img src="/assets/img/gh.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/joelangley7/" target="_blank"><img src="/assets/img/li.png" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="/assets/img/ig.png" alt="Instagram"></a>
+            <a href="https://twitter.com/" target="_blank"><img src="/assets/img/tw.png" alt="Twitter"></a>
+          </div>
+        </div>
 
 </body>
 

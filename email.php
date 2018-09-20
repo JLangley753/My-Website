@@ -31,11 +31,11 @@ if (isset($_POST['submit'])) {
   $message = $_POST['howicanhelp'];
 
   $subject = "You have received a new email.";
-  $mailTo = "panono@zippiex.com";
+  $mailTo = "jdklangley@outlook.com";
   $headers = "From: ".$mailFrom;
   $txt = "You have received an e-mail from ".$name.".\n\n".$message;
 
   mail($mailTo, $subject, $txt, $headers);
-  header("Location: index.html?mailsend");
+  header("Location: thank-you.html");
   };
 ?>
