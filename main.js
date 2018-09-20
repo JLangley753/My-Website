@@ -8,7 +8,7 @@ bm.onclick = openMenu
 function openMenu() {
   var bars = document.getElementsByClassName('bar');
   var barsArray = [].slice.call(bars);
-  
+
   dd.classList.toggle('ddshow');
   for (var i = 0; i < barsArray.length; i++) {
     barsArray[i].classList.toggle('changebar' + [i + 1]);
