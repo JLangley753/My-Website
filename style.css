@@ -102,20 +102,26 @@ body {
 }
 
 /* Drop down menu */
-.dropdownmenumob {
+.dropdownmenu {
   background: rgba(17, 45, 78, 0);
   opacity: 0;
   overflow: none;
   position: absolute;
   text-align: center;
+  top: 50px;
   transition: 0.5s ease-in-out;
   width: 100%;
   visibility: hidden;
   z-index: 10;
 }
 
-.dropdownmenubig {
-  visibility: hidden;
+.pca {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+.pca:after {
+  display: none;
 }
 
 .changedd {
@@ -129,7 +135,7 @@ body {
   visibility: visible;
 }
 
-.dropdownmenumob a {
+.dropdownmenu a {
   color: #f7f7f7;
   text-decoration: none;
 }
@@ -444,22 +450,26 @@ body {
     visibility: hidden;
   }
 
-  .dropdownmenubig {
+  .dropdownmenu {
+    display: flex;
     justify-content: flex-end;
     position: fixed;
-    display: flex;
     height: 58px;
+    opacity: 1;
     top: 0;
+    transition: 0.5s ease-in-out;
     visibility: visible;
     width: 100%;
+    z-index: 10;
   }
 
-  .dropdownmenubig a {
+  .dropdownmenu a {
     color: #f7f7f7;
     text-decoration: none;
   }
 
   .pca {
+    display: block;
     position: relative;
   }
 
@@ -518,9 +528,7 @@ body {
     margin: 30px 200px;
   }
 
-  .pagebar {
-
-  }
+  .pagebar {}
 
   .projectsgrid {
     display: grid;
