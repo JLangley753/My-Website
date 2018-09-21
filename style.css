@@ -26,7 +26,7 @@ body {
 }
 
 .navbarswitch {
-  top: 120px;
+  top: 40px;
   position: absolute;
 }
 
@@ -71,7 +71,6 @@ body {
   background-color: transparent;
   border: 0;
   cursor: pointer;
-  outline: none;
   margin: auto 10px;
 }
 
@@ -106,9 +105,9 @@ body {
   background: rgba(17, 45, 78, 0);
   opacity: 0;
   overflow: none;
-  position: absolute;
+  position: fixed;
   text-align: center;
-  top: 50px;
+  top: 80px;
   transition: 0.5s ease-in-out;
   width: 100%;
   visibility: hidden;
@@ -126,6 +125,7 @@ body {
 
 .changedd {
   background: rgba(17, 45, 78, 0.5);
+  top: 58px;
   transition: 0.5s ease-in-out;
 }
 
@@ -188,6 +188,30 @@ body {
   font-weight: 100;
   padding: 300px 0;
   text-align: center;
+}
+
+.intro a {
+  color: #f7f7f7;
+  position: relative;
+  text-decoration: none;
+}
+
+.intro a:after {
+  background: none repeat scroll 0 0 transparent;
+  background-color: #f7f7f7;
+  bottom: 2px;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  width: 0;
+}
+
+.intro a:hover:after {
+  left: 0;
+  width: 100%;
 }
 
 .pagebar {
@@ -266,13 +290,26 @@ body {
 
 .projectcardtxt a {
   color: #3f72af;
+  position: relative;
   text-decoration: none;
-  transition: 0.3s ease-in-out;
 }
 
-.projectcartxt a:hover {
-  color: #dbe2ef;
-  transition: 0.3s ease-in-out;
+.projectcardtxt a:after {
+  background: none repeat scroll 0 0 transparent;
+  background-color: #3f72af;
+  bottom: 0px;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  width: 0;
+}
+
+.projectcardtxt a:hover:after {
+  left: 0;
+  width: 100%;
 }
 
 .activecard {
@@ -426,25 +463,48 @@ body {
 }
 
 .thankyoubox h2 {
-  color: #f7f7f7;
   margin: 0;
   padding: 10px 50px;
 }
 
 .thankyoubox a {
-  color: #0B1D32;
-  opacity: 0.55;
+  color: #f7f7f7;
+  position: relative;
   text-decoration: none;
   transition: 0.3s ease-in-out;
 }
 
-.thankyoubox a:hover {
-  opacity: 0.15;
-  transition: 0.3s ease-in-out;
+.thankyoubox a:after {
+  background: none repeat scroll 0 0 transparent;
+  background-color: #f7f7f7;
+  bottom: 0px;
+  content: "";
+  display: block;
+  height: 2.5px;
+  left: 50%;
+  position: absolute;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+  width: 0;
+}
+
+.thankyoubox a:hover:after {
+  left: 0;
+  width: 100%;
 }
 
 /* Media Queries */
 @media (min-width: 768px) {
+  .topbar {
+    height: 80px;
+    transition: 0.5s ease-in-out;
+  }
+
+  .solidnav {
+    background-color: rgba(17, 45, 78, 0.97);
+    height: 58px;
+    transition: 0.5s ease-in-out;
+  }
+
   .burgermenu {
     display: none;
     visibility: hidden;
@@ -454,7 +514,7 @@ body {
     display: flex;
     justify-content: flex-end;
     position: fixed;
-    height: 58px;
+    height: 80px;
     opacity: 1;
     top: 0;
     transition: 0.5s ease-in-out;
@@ -463,20 +523,19 @@ body {
     z-index: 10;
   }
 
+  .changedd {
+    height: 58px;
+  }
+
   .dropdownmenu a {
     color: #f7f7f7;
     text-decoration: none;
   }
 
-  .pca {
-    display: block;
-    position: relative;
-  }
-
   .pca:after {
     background: none repeat scroll 0 0 transparent;
     background-color: #f7f7f7;
-    bottom: 0;
+    bottom: -1px;
     content: "";
     display: block;
     height: 1.5px;
@@ -487,8 +546,8 @@ body {
   }
 
   .pca:hover:after {
-    width: 100%;
     left: 0;
+    width: 100%;
   }
 
   .projects, .contact, .about {
@@ -498,8 +557,10 @@ body {
   }
 
   .pca {
+    display: block;
     font-weight: 100;
     margin: 20px 5px;
+    position: relative;
     transition: 0.5s ease-in-out;
   }
 
