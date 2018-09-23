@@ -12,13 +12,17 @@
 </head>
 
 <body>
-  <div class="header">
-    <div id="toppage"></div>
+  <!-- Header content with navbar and drodown menu -->
+  <header>
+    <div id="toppage"></div> <!-- Anchor point for little Joe icon further down page -->
+    <!-- Navbar section -->
     <div class="navbar">
+      <!-- Main navbar content -->
       <div class="topbar tb">
         <div class="littlejoe lj">
-          <a href="#toppage"><img src="/assets/img/littlejoe.jpg" alt=""></a>
+          <a href="#toppage"><img src="/assets/img/littlejoe.jpg" alt="A little picture of Joe"></a>
         </div>
+        <!-- Drop down menu content -->
         <div class="dropdownmenu dd">
           <div class="projects">
             <a href="#projectsSec"><h2 class="pca">Projects</h2></a>
@@ -29,6 +33,7 @@
           <div class="contact">
             <a href="#contact"><h2 class="pca">Contact</h2></a>
           </div>
+          <!-- Social media section of navbar -->
           <div class="socialmediawrapbig smwd">
             <div class="socialmedia">
               <a href="https://github.com/JLangley753" target="_blank"><img src="/assets/img/gh.png" alt="GitHub"></a>
@@ -38,6 +43,7 @@
             </div>
           </div>
         </div>
+        <!-- Burger menu bars -->
         <button class="burgermenu bm">
           <div class="bar1 bar"></div>
           <div class="bar2 bar"></div>
@@ -45,23 +51,29 @@
         </button>
       </div>
     </div>
+    <!-- Switch for navbar to become solid -->
     <div class="navbarswitch"></div>
+    <!-- Intro text section -->
     <div class="intro" id="intro">
-      <h2>I'm <a href="#aboutme">Joe</a>, and I create fun, unique and beautiful websites.</h2>
+      <h1>I'm Joe, and I create fun, unique and beautiful websites.</h1>
     </div>
-  </div>
-
+  </header>
+<!-- Pagebar content separator -->
   <div class="pagebar content" id="pagebar"></div>
 
-  <div class="projectsSec content" id="projectsSec">
+<!-- My projects section -->
+  <section class="projectsSec content" id="projectsSec">
     <h2>Projects</h2>
     <div class="projgridwrap">
-      <button class="leftArrow arrow" onclick="projCardSwitcher(-1)"><img src="/assets/img/leftarrow.png" alt=""></button>
+      <!-- Left navigation button -->
+      <button class="leftArrow arrow" onclick="projCardSwitcher(-1)"><img src="/assets/img/leftarrow.png" alt="Left slideshow arrow"></button>
+      <!-- Projects grid -->
       <div class="projectsgrid">
-        <div class="spinnerapp projectcard project1">
+        <!-- Spinner app div -->
+        <div class="spinnerapp projectcard">
           <h3 class="fade">Spinner Wheel</h3>
           <div class="projectcardimg fade">
-            <img src="/assets/img/spinnerapp.png" alt="">
+            <img src="/assets/img/spinnerapp.png" alt="A screenshot of the spinner wheel app">
           </div>
             <div class="projectcardtxt fade">
               <p>Languages: HTML, CSS, Javascript (React)</p>
@@ -69,10 +81,11 @@
               <p><a href="https://github.com/Boxface/react-random-game-spinner" target="_blank">Click here</a> to find out more!</p>
             </div>
           </div>
-          <div class="cafejoe projectcard project2">
+          <!-- Cafe Joe div -->
+          <div class="cafejoe projectcard">
             <h3 class="fade">Cafe Joe</h3>
             <div class="projectcardimg fade">
-              <img src="/assets/img/joescafe.png" alt="">
+              <img src="/assets/img/joescafe.png" alt="A screenshot of the Cafe Joe website">
           </div>
               <div class="projectcardtxt fade">
                 <p>Languages: HTML, CSS, Javascript</p>
@@ -80,10 +93,11 @@
                 <p><a href="https://github.com/JLangley753/Cafe-Template-02.08.18" target="_blank">Click here</a> to find out more!</p>
               </div>
             </div>
-            <div class="otherproject1 projectcard project3">
+            <!-- Academic Film and TV div -->
+            <div class="otherproject1 projectcard">
               <h3 class="fade">Academic Film & TV</h3>
               <div class="projectcardimg fade">
-                <img src="/assets/img/academicfilmandtv.png" alt="">
+                <img src="/assets/img/academicfilmandtv.png" alt="A screenshot of the Academic Film and TV website">
           </div>
                 <div class="projectcardtxt fade">
                   <p>Languages: HTML, CSS, Javascript, PHP</p>
@@ -91,50 +105,66 @@
                   <p><a href="https://github.com/JLangley753/Academic-Film-and-TV-29.07.18" target="_blank">Click here</a> to find out more!</p>
                 </div>
               </div>
+              <!-- Box A Photography div -->
+              <div class="otherproject1 projectcard">
+                <h3 class="fade">Box A Photography</h3>
+                <div class="projectcardimg fade">
+                  <img src="/assets/img/" alt="A screenshot of the Box A Photography website">
             </div>
-            <button class="rightArrow arrow" onclick="projCardSwitcher(+1)"><img src="/assets/img/rightarrow.png" alt=""></button>
-          </div>
-        </div>
-
-        <div class="pagebar content" id="pagebar"></div>
-
-        <div class="aboutme content" id="aboutme">
-          <h2>About</h2>
-          <div class="aboutmewrap">
-            <div class="aboutmesection">
-              <img src="/assets/img/me.JPG" alt="">
-              <p>My name is Joe Langley, and I'm a web developer based in West London. I love to create websites from scratch that look great and respond well on all devices.</p>
-              <p>When I'm not designing and creating projects, I love to travel, eat food, discover new music and watch football!</p>
-              <p>At the moment, I am available to make bespoke websites for small businesses. If you like what you hear and see, drop me a message in the box below.</p>
+                  <div class="projectcardtxt fade">
+                    <p>Languages: HTML, CSS, Javascript, PHP</p>
+                    <p>A simple showcase style website using the Bootstrap framework to create an easy to navigate </p>
+                    <p><a href="https://github.com/JLangley753/" target="_blank">Click here</a> to find out more!</p>
+                  </div>
+                </div>
             </div>
+            <!-- Right navigation arrow -->
+            <button class="rightArrow arrow" onclick="projCardSwitcher(+1)"><img src="/assets/img/rightarrow.png" alt="Right slideshow arrow"></button>
           </div>
-        </div>
+  </section>
 
-        <div class="pagebar content" id="pagebar"></div>
+  <div class="pagebar content" id="pagebar"></div>
 
-        <div class="contactus content" id="contact">
-          <h2>Contact</h2>
-          <div class="contactwrap">
-            <div class="contactformsection">
-              <form action="email.php" method="post">
-                <input class="formbox" type="text" name="name" placeholder="Your name..">
-                <input class="formbox" type="text" name="mail" placeholder="Your email..">
-                <textarea name="howicanhelp" class="formbox howicanhelp" cols="10" rows="4" placeholder="Let's chat.."></textarea>
-                <button type="submit" value="Submit" name="submit" class="submitbutton">Submit</button>
-              </form>
-            </div>
-          </div>
-        </div>
+<!-- About me section -->
+  <section class="aboutme content" id="aboutme">
+    <h2>About</h2>
+    <div class="aboutmewrap">
+      <div class="aboutmesection">
+        <img src="/assets/img/me.JPG" alt="A big picture of Joe">
+        <p>My name is Joe Langley, and I'm a web developer based in West London. I love to create websites from scratch that look great and respond well on all devices.</p>
+        <p>When I'm not designing and creating projects, I love to travel, eat food, discover new music and watch football!</p>
+        <p>At the moment, I am available to make bespoke websites for small businesses. If you like what you hear and see, drop me a message in the box below.</p>
+      </div>
+    </div>
+  </section>
 
-        <div class="footer">
-          <p>This website was designed and created by <a href="#toppage">Joe Langley</a></p>
-          <div class="footersocials">
-            <a href="https://github.com/JLangley753" target="_blank"><img src="/assets/img/gh.png" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/joelangley7/" target="_blank"><img src="/assets/img/li.png" alt="LinkedIn"></a>
-            <a href="https://www.instagram.com/joe_langley7" target="_blank"><img src="/assets/img/ig.png" alt="Instagram"></a>
-            <a href="https://twitter.com/" target="_blank"><img src="/assets/img/tw.png" alt="Twitter"></a>
-          </div>
-        </div>
+  <div class="pagebar content" id="pagebar"></div>
+
+<!-- Contact us form section -->
+  <section class="contactus content" id="contact">
+    <h2>Contact</h2>
+    <div class="contactwrap">
+      <div class="contactformsection">
+        <form action="" method="post">
+          <input class="formbox" type="text" name="name" id="name" placeholder="Your name..">
+          <input class="formbox" type="text" name="mail" id="mail" placeholder="Your email..">
+          <textarea name="howicanhelp" class="formbox letschat" cols="10" rows="4" placeholder="Let's chat.."></textarea>
+          <button type="submit" value="Submit" name="submit" id="validate" class="submitbutton">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer and social media links -->
+  <footer>
+    <p>This website was designed and created by <a href="#toppage">Joe Langley</a></p>
+    <div class="footersocials">
+      <a href="https://github.com/JLangley753" target="_blank"><img src="/assets/img/gh.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/joelangley7/" target="_blank"><img src="/assets/img/li.png" alt="LinkedIn"></a>
+      <a href="https://www.instagram.com/joe_langley7" target="_blank"><img src="/assets/img/ig.png" alt="Instagram"></a>
+      <a href="https://twitter.com/" target="_blank"><img src="/assets/img/tw.png" alt="Twitter"></a>
+    </div>
+  </footer>
 
 </body>
 
