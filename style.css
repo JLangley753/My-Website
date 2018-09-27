@@ -280,6 +280,11 @@ header {
   overflow-x: hidden;
 }
 
+.projectcardimg {
+  box-shadow: 1px 1px 4px 1px #616161;
+  width: 270px;
+}
+
 .projectcardimg img {
   width: 270px;
 }
@@ -587,6 +592,10 @@ footer a:hover, a:focus {
     width: 210px;
   }
 
+  .projectcardimg {
+    width: 210px;
+  }
+
   .projectcard {
     width: 210px;
   }
@@ -639,5 +648,36 @@ footer a:hover, a:focus {
     color: #f7f7f7;
     margin: 0;
     padding: 10px 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    margin: 30px auto;
+    width: 1010px;
+  }
+  .projectcard img {
+    width: 300px;
+  }
+
+  .projectcardimg {
+    width: 300px;
+  }
+
+  .projectcard {
+    width: 300px;
+  }
+
+  .aboutme img {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  .aboutme p {
+    max-width: 1000px;
+  }
+
+  .contactformsection {
+    width: 1000px;
   }
 }
