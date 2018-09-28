@@ -66,6 +66,10 @@ header {
   width: auto;
 }
 
+.littlejoe:hover {
+  opacity: 1;
+}
+
 .amendedjoe img {
   height: 44px;
   transition: 0.5s ease-in-out;
@@ -88,7 +92,7 @@ header {
   height: 3px;
   background-color: #f7f7f7;
   margin: 6px 0;
-  transition: 0.4s;
+  transition: 0.5s ease-in-out;
   width: 35px;
 }
 
@@ -143,24 +147,6 @@ header {
 .pca {
   color: #f7f7f7;
   text-decoration: none;
-}
-
-.pca:after {
-  background: none repeat scroll 0 0 transparent;
-  background-color: #f7f7f7;
-  bottom: -1px;
-  content: "";
-  display: block;
-  height: 1.5px;
-  left: 50%;
-  position: absolute;
-  transition: width 0.5s ease 0s, left 0.5s ease 0s;
-  width: 0;
-}
-
-.pca:hover:after, .pca:focus:after {
-  left: 0;
-  width: 100%;
 }
 
 .projects, .contact, .about {
@@ -501,13 +487,11 @@ footer a:hover, a:focus {
 
   .topbar {
     height: 80px;
-    transition: 0.5s ease-in-out;
   }
 
   .solidnav {
     background-color: rgba(17, 45, 78, 0.97);
     height: 58px;
-    transition: 0.5s ease-in-out;
   }
 
   .burgermenu {
@@ -549,6 +533,24 @@ footer a:hover, a:focus {
     margin: 20px 5px;
     position: relative;
     transition: 0.5s ease-in-out;
+  }
+
+  .pca:after {
+    background: none repeat scroll 0 0 transparent;
+    background-color: #f7f7f7;
+    bottom: -1px;
+    content: "";
+    display: block;
+    height: 1.5px;
+    left: 50%;
+    position: absolute;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+  }
+
+  .pca:hover:after, .pca:focus:after {
+    left: 0;
+    width: 100%;
   }
 
   .changepca {
