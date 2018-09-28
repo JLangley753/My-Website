@@ -2,12 +2,12 @@
 
 var bm = document.querySelector('.bm'); // burger menu
 var dd = document.querySelector('.dd'); // dropdowm menu
+var bars = document.getElementsByClassName('bar');
+var barsArray = [].slice.call(bars);
 
 bm.onclick = openMenu
 
 function openMenu() {
-  var bars = document.getElementsByClassName('bar');
-  var barsArray = [].slice.call(bars);
 
   dd.classList.toggle('ddshow');
   for (var i = 0; i < barsArray.length; i++) {
@@ -23,8 +23,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     });
-  });
-});
+    setTimeout(function closeMenu() {
+      dd.classList.remove('ddshow');
+      for (var i = 0; i < barsArray.length; i++) {
+        barsArray[i].classList.remove('changebar' + [i + 1]);
+      }
+  }, 500);
+})});
 
 // Change navbar appearance on scroll
 
@@ -89,4 +94,4 @@ function showProj(n) {
     }
     projects[projIndex - 1].classList.remove('deactivecard');
     projects[projIndex - 1].classList.add('activecard');
-}
+};
