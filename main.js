@@ -28,7 +28,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       for (var i = 0; i < barsArray.length; i++) {
         barsArray[i].classList.remove('changebar' + [i + 1]);
       }
-  }, 500);
+  }, 600);
 })});
 
 // Change navbar appearance on scroll
