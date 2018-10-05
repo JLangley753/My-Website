@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width" initial-scale="1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content = "Front end web developer based in West London. Please see my portfolio and contact me if you're a small business that needs a website." />
   <link rel="stylesheet" href="style.css">
@@ -45,11 +45,11 @@
           </div>
         </div>
         <!-- Burger menu bars -->
-        <button class="burgermenu bm">
+        <div class="burgermenu bm">
           <div class="bar1 bar"></div>
           <div class="bar2 bar"></div>
           <div class="bar3 bar"></div>
-        </button>
+        </div>
       </div>
     </div>
     <!-- Switch for navbar to become solid -->
@@ -60,7 +60,7 @@
     </div>
   </header>
 <!-- Pagebar content separator -->
-  <div class="pagebar content" id="pagebar"></div>
+  <div class="pagebar content"></div>
 
 <!-- My projects section -->
   <section class="projectsSec content" id="projectsSec">
@@ -78,7 +78,7 @@
           </div>
             <div class="projectcardtxt fade">
               <p>Languages: HTML, CSS, Javascript (React)</p>
-              <p>A collaborative project, this spinner app uses the React framework to create an interactive game show style spinner wheel for my friends.</p>
+              <p>A collaborative project, this spinner app uses the React framework to create an interactive game show style spinner wheel for my friends. This was a good opportunity to familarise myself with JSX and the React component format.</p>
               <p><a href="https://github.com/Boxface/react-random-game-spinner" target="_blank">Click here</a> to find out more!</p>
             </div>
           </div>
@@ -124,22 +124,27 @@
           </div>
   </section>
 
-  <div class="pagebar content" id="pagebar"></div>
+  <div class="pagebar content"></div>
 
 <!-- About me section -->
   <section class="aboutme content" id="aboutme">
     <h2>About</h2>
     <div class="aboutmewrap">
       <div class="aboutmesection">
+        <div class="aboutmeimg">
         <img src="/assets/img/me.JPG" alt="A big picture of Joe">
+        </div>
+        <div class="aboutmetxt">
         <p>My name is Joe Langley, and I'm a front end web developer based in West London. I love to create websites from scratch that look great and respond well on all devices.</p>
-        <p>When I'm not designing and creating projects, I love to travel, eat food, discover new music and watch football!</p>
+        <p>When I'm not designing and creating projects, I love to travel, eat interesting food, discover new music and watch football!</p>
+        <p>I currently have good experience with HTML, CSS and Javascript. I have worked on a project using the React library and I have also utilised jQuery to create a dynamic user experience. Currently, I am working on a project using Node.js so I can broaden my skills by picking up a back end language.</p>
         <p>At the moment, I am available to make bespoke websites for small businesses. If you like what you hear and see, drop me a message in the box below.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="pagebar content" id="pagebar"></div>
+  <div class="pagebar content"></div>
 
 <!-- Contact us form section -->
   <section class="contactus content" id="contact">
@@ -167,8 +172,9 @@
     </div>
   </footer>
 
+  <script src="main.js"></script>
+
 </body>
 
-<script src="main.js"></script>
 
 </html>

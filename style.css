@@ -8,6 +8,10 @@ body {
   margin: 0px;
 }
 
+h2, h3 {
+  font-weight: 400;
+}
+
 /* Header Section (includes navbar, dropdown and menu) */
 
 header {
@@ -45,6 +49,7 @@ header {
 }
 
 .solidnav {
+  box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.2);
   background-color: rgba(17, 45, 78, 0.97);
   height: 58px;
   transition: 0.5s ease-in-out;
@@ -84,7 +89,7 @@ header {
   margin: auto 10px;
 }
 
-.burgermenu:active {
+.burgermenu:active, .burgermenu:hover {
   outline: none;
 }
 
@@ -146,6 +151,7 @@ header {
 
 .pca {
   color: #f7f7f7;
+  font-weight: 100;
   text-decoration: none;
 }
 
@@ -263,6 +269,7 @@ header {
 .projectcard {
   border: 1px solid #112d4e;
   border-radius: 5px;
+  box-shadow: 5px 3px 10px 2px rgba(0,0,0,0.1);
   height: 400px;
   padding: 5px 10px;
   width: 270px;
@@ -275,12 +282,19 @@ header {
 }
 
 .projectcardimg {
-  box-shadow: 1px 1px 4px 1px #616161;
+  box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.3);
+  overflow: hidden;
   width: 270px;
 }
 
 .projectcardimg img {
+transition: 0.3s ease;
   width: 270px;
+}
+
+.projectcard img:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
 }
 
 .projectcardtxt a {
@@ -342,53 +356,59 @@ header {
 
 .formbox {
   background-color: #f7f7f7;
-  border: 0.1px solid #112d4e;
+  border: 1px solid #112d4e;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 1em;
   margin: 5px 0;
   padding: 8px;
+  transition: 0.3s ease;
   width: 95%;
 }
 
-.formbox:focus {
-  outline-color: #3f72af;
+.formbox:focus, .letschat:focus {
+  border-radius: 7px;
+  outline: none;
+  transition: 0.3s ease;
 }
 
 .letschat {
   background-color: #f7f7f7;
-  border: 0.1px solid #112d4e;
+  border: 1px solid #112d4e;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 1em;
   height: 4em;
   padding: 8px;
   resize: none;
+  transition: 0.3s ease;
   width: 95%;
 }
 
 .submitbutton {
   background-color: #f7f7f7;
-  border: 0.1px solid #112d4e;
+  border: 1px solid #112d4e;
   font-weight: 300;
   font-size: 0.9em;
   margin: 0 15px 0 0;
   padding: 5px;
-  transition: 0.3s;
+  transition: 0.3s ease;
   width: 200px;
 }
 
 .submitbutton:hover, .submitbutton:focus {
   background-color: #112d4e;
+  border-radius: 7px;
   color: #f7f7f7;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 /* About Me section */
 
 .aboutme img {
   border-radius: 5px;
+  box-shadow: 5px 3px 10px 2px rgba(0,0,0,0.15);
   width: 100%;
 }
 
@@ -454,11 +474,13 @@ footer a:hover, a:focus {
 
 .thankyoubox h1 {
   color: #f7f7f7;
+  font-weight: 100;
   margin: 0;
   padding: 50px 50px 30px 50px;
 }
 
 .thankyoubox h2 {
+  font-weight: 100;
   margin: 0;
   padding: 10px 50px;
 }
@@ -476,7 +498,7 @@ footer a:hover, a:focus {
   bottom: 0px;
   content: "";
   display: block;
-  height: 2.5px;
+  height: 1.5px;
   left: 50%;
   position: absolute;
   transition: width 0.5s ease 0s, left 0.5s ease 0s;
@@ -624,6 +646,16 @@ footer a:hover, a:focus {
   .aboutmewrap {
     display: flex;
     justify-content: center;
+  }
+
+  .aboutmesection {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    grid-column-gap: 20px;
+  }
+
+  .aboutmeimg {
+    margin: 20px 0;
   }
 
   .aboutme img {
