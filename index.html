@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content = "Front end web developer based in West London. Please see my portfolio and contact me if you're a small business that needs a website." />
+  <meta name="description" content="Front end web developer based in West London. Please see my portfolio and contact me if you're a small business that needs a website." />
+  <meta name="theme-color" content="rgba(17, 45, 78, 0.97)">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
   <link rel="icon" href="/assets/img/favicon.ico">
@@ -14,7 +15,7 @@
 
 <body>
   <!-- Header content with navbar and drodown menu -->
-  <header>
+  <header class="homepage">
     <div id="toppage"></div> <!-- Anchor point for little Joe icon further down page -->
     <!-- Navbar section -->
     <div class="navbar">
@@ -26,13 +27,19 @@
         <!-- Drop down menu content -->
         <div class="dropdownmenu dd">
           <div class="projects">
-            <a href="#projectsSec"><h2 class="pca">Projects</h2></a>
+            <a href="projects.html">
+              <h2 class="pca">Projects</h2>
+            </a>
           </div>
           <div class="about">
-            <a href="#aboutme"><h2 class="pca">About</h2></a>
+            <a href="#aboutme">
+              <h2 class="pca">About</h2>
+            </a>
           </div>
           <div class="contact">
-            <a href="#contact"><h2 class="pca">Contact</h2></a>
+            <a href="#contact">
+              <h2 class="pca">Contact</h2>
+            </a>
           </div>
           <!-- Social media section of navbar -->
           <div class="socialmediawrapbig smwd">
@@ -59,55 +66,56 @@
       <h1>I'm Joe, and I create fun, unique and beautiful websites.</h1>
     </div>
   </header>
-<!-- Pagebar content separator -->
+  <!-- Pagebar content separator -->
   <div class="pagebar content"></div>
 
-<!-- My projects section -->
+  <!-- My projects section -->
   <section class="projectsSec content" id="projectsSec">
-    <h2>Projects</h2>
+    <a href="projects.html"><h2>Projects</h2></a>
+    <p>Click on the cards or the Projects link above to go to the projects page!</p>
     <div class="projgridwrap">
       <!-- Left navigation button -->
       <button class="leftArrow arrow" onclick="projCardSwitcher(-1)"><img src="/assets/img/leftarrow.png" alt="Left slideshow arrow"></button>
       <!-- Projects grid -->
       <div class="projectsgrid">
         <!-- Spinner app div -->
-        <div class="spinnerapp projectcard">
-          <h3 class="fade">Spinner Wheel</h3>
-          <div class="projectcardimg fade">
-            <img src="/assets/img/spinnerapp.png" alt="A screenshot of the spinner wheel app">
-          </div>
+        <a href="projects.html#spinnerapp">
+          <div class="spinnerapp projectcard">
+            <h3 class="fade">Spinner Wheel</h3>
+            <div class="projectcardimg fade">
+              <img src="/assets/img/spinnerapp.png" alt="A screenshot of the spinner wheel app">
+            </div>
             <div class="projectcardtxt fade">
               <p>Languages: HTML, CSS, Javascript (React)</p>
-              <p>A collaborative project, this spinner app uses the React framework to create an interactive game show style spinner wheel for my friends. This was a good opportunity to familarise myself with JSX and the React component format.</p>
-              <p><a href="https://github.com/Boxface/react-random-game-spinner" target="_blank">Click here</a> to find out more!</p>
             </div>
           </div>
-          <!-- Cafe Joe div -->
+        </a>
+        <!-- Cafe Joe div -->
+        <a href="projects.html#joescafe">
           <div class="cafejoe projectcard">
             <h3 class="fade">Joe's Cafe</h3>
             <div class="projectcardimg fade">
-              <img src="/assets/img/joescafe.png" alt="A screenshot of the Cafe Joe website">
-          </div>
-              <div class="projectcardtxt fade">
-                <p>Languages: HTML, CSS, Javascript</p>
-                <p>One of my first websites, complete with an automatic slideshow of images and responsive design all over.</p>
-                <p><a href="https://github.com/JLangley753/Cafe-Template-02.08.18" target="_blank">Click here</a> to find out more!</p>
-              </div>
+              <img src="/assets/img/joescafe.jpg" alt="A screenshot of the Cafe Joe website">
             </div>
-            <!-- Academic Film and TV div -->
-            <div class="otherproject1 projectcard">
-              <h3 class="fade">Academic Film & Television</h3>
-              <div class="projectcardimg fade">
-                <img src="/assets/img/academicfilmandtv.png" alt="A screenshot of the Academic Film and TV website">
+            <div class="projectcardtxt fade">
+              <p>Languages: HTML, CSS, Javascript</p>
+            </div>
           </div>
-                <div class="projectcardtxt fade">
-                  <p>Languages: HTML, CSS, Javascript, PHP</p>
-                  <p>A project for my father's business, Academic Film & TV was built with a mobile first approach and features a sign-up newsletter form.</p>
-                  <p><a href="https://github.com/JLangley753/Academic-Film-and-TV-29.07.18" target="_blank">Click here</a> to find out more!</p>
-                </div>
-              </div>
-              <!-- Box A Photography div -->
-            <!--  <div class="otherproject1 projectcard">
+        </a>
+        <!-- Academic Film and TV div -->
+        <a href="projects.html#academicfilmandtv">
+          <div class="otherproject1 projectcard">
+            <h3 class="fade">Academic Film & TV</h3>
+            <div class="projectcardimg fade">
+              <img src="/assets/img/academicfilmandtv.jpg" alt="A screenshot of the Academic Film and TV website">
+            </div>
+            <div class="projectcardtxt fade">
+              <p>Languages: HTML, CSS, Javascript, PHP</p>
+            </div>
+          </div>
+        </a>
+        <!-- Box A Photography div -->
+        <!--  <div class="otherproject1 projectcard">
                 <h3 class="fade">Box A Photography</h3>
                 <div class="projectcardimg fade">
                   <img src="/assets/img/" alt="A screenshot of the Box A Photography website">
@@ -118,27 +126,28 @@
                     <p><a href="https://github.com/JLangley753/" target="_blank">Click here</a> to find out more!</p>
                   </div>
                 </div> -->
-            </div>
-            <!-- Right navigation arrow -->
-            <button class="rightArrow arrow" onclick="projCardSwitcher(+1)"><img src="/assets/img/rightarrow.png" alt="Right slideshow arrow"></button>
-          </div>
+      </div>
+      <!-- Right navigation arrow -->
+      <button class="rightArrow arrow" onclick="projCardSwitcher(+1)"><img src="/assets/img/rightarrow.png" alt="Right slideshow arrow"></button>
+    </div>
   </section>
 
   <div class="pagebar content"></div>
 
-<!-- About me section -->
+  <!-- About me section -->
   <section class="aboutme content" id="aboutme">
     <h2>About</h2>
     <div class="aboutmewrap">
       <div class="aboutmesection">
         <div class="aboutmeimg">
-        <img src="/assets/img/me.JPG" alt="A big picture of Joe">
+          <img src="/assets/img/me.JPG" alt="A big picture of Joe">
         </div>
         <div class="aboutmetxt">
-        <p>My name is Joe Langley, and I'm a front end web developer based in West London. I love to create websites from scratch that look great and respond well on all devices.</p>
-        <p>When I'm not designing and creating projects, I love to travel, eat interesting food, discover new music and watch football!</p>
-        <p>I currently have good experience with HTML, CSS and Javascript. I have worked on a project using the React library and I have also utilised jQuery to create a dynamic user experience. Currently, I am working on a project using Node.js so I can broaden my skills by picking up a back end language.</p>
-        <p>At the moment, I am available to make bespoke websites for small businesses. If you like what you hear and see, drop me a message in the box below.</p>
+          <p>My name is Joe Langley, and I'm a front end web developer based in West London. I love to create websites from scratch that look great and respond well on all devices.</p>
+          <p>When I'm not designing and creating projects, I love to travel, eat interesting food, discover new music and watch football!</p>
+          <p>I currently have good experience with HTML, CSS and Javascript. I have worked on a project using the React library and I have also utilised jQuery to create a dynamic user experience. Currently, I am working on a project using Node.js
+            so I can broaden my skills by picking up a back end language.</p>
+          <p>At the moment, I am available to make bespoke websites for small businesses. If you like what you hear and see, drop me a message in the box below.</p>
         </div>
       </div>
     </div>
@@ -146,7 +155,7 @@
 
   <div class="pagebar content"></div>
 
-<!-- Contact us form section -->
+  <!-- Contact us form section -->
   <section class="contactus content" id="contact">
     <h2>Contact</h2>
     <div class="contactwrap">
@@ -161,7 +170,7 @@
     </div>
   </section>
 
-<!-- Footer and social media links -->
+  <!-- Footer and social media links -->
   <footer>
     <p>This website was designed and created by <a href="#toppage">Joe Langley</a></p>
     <div class="footersocials">
