@@ -214,8 +214,9 @@ a {
 
 .intro h1 {
   font-weight: 100;
-  padding: 450px 0;
+  padding: 300px 0;
   text-align: center;
+  transition: 0.3s ease;
 }
 
 .pagebar {
@@ -498,6 +499,17 @@ footer a:hover, a:focus {
 }
 
 /* Media Queries */
+
+@media (min-width: 525px) {
+  
+  .intro h1 {
+    font-weight: 100;
+    padding: 450px 0;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+
+}
 
 @media (min-width: 768px) {
 
