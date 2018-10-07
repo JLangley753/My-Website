@@ -27,7 +27,6 @@ a {
 }
 
 /* Header Section (includes navbar, dropdown and menu) */
-
 .projpage {
   background-image: url('/assets/img/projbackground.jpg');
   background-position: center;
@@ -297,7 +296,6 @@ a {
 }
 
 /* Footer */
-
 footer {
   background-color: #0B1D32;
   color: #f7f7f7;
@@ -392,7 +390,7 @@ footer a:hover, a:focus {
   .pca:after {
     background: none repeat scroll 0 0 transparent;
     background-color: #f7f7f7;
-    bottom: 9px;
+    bottom: 1px;
     content: "";
     display: block;
     height: 1.5px;
@@ -432,7 +430,6 @@ footer a:hover, a:focus {
   }
 
   /* Projects section media queries */
-
   @media (min-width: 1200px) {
     .content {
       margin: 30px auto;

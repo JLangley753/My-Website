@@ -18,7 +18,6 @@ a {
 }
 
 /* Header Section (includes navbar, dropdown and menu) */
-
 .homepage {
   background-image: url('/assets/img/background.jpg');
   background-position: center;
@@ -30,7 +29,6 @@ a {
 }
 
 /* Core navbar styling */
-
 .navbar {
   position: fixed;
   left: 0;
@@ -56,14 +54,13 @@ a {
 }
 
 .solidnav {
-  box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.2);
   background-color: rgba(17, 45, 78, 0.97);
   height: 58px;
   transition: 0.5s ease-in-out;
 }
 
 /* Little Joe image styling */
-
 .littlejoe {
   display: block;
   margin: 0;
@@ -89,7 +86,6 @@ a {
 }
 
 /* Burger menu */
-
 .burgermenu {
   background-color: transparent;
   border: 0;
@@ -124,7 +120,6 @@ a {
 }
 
 /* Drop down menu */
-
 .dropdownmenu {
   background: rgba(17, 45, 78, 0);
   opacity: 0;
@@ -151,7 +146,6 @@ a {
 }
 
 /* 'Projects, Contact, About' on navbar section styling */
-
 .pca {
   color: #f7f7f7;
   font-weight: 100;
@@ -175,7 +169,6 @@ a {
 }
 
 /* Social Media section  */
-
 .socialmediawrap {
   margin: 7px;
 }
@@ -202,7 +195,6 @@ a {
 }
 
 /* Intro text section */
-
 .intro {
   color: #f7f7f7;
   display: flex;
@@ -225,12 +217,38 @@ a {
 }
 
 /* Content wrap */
-
 .content {
   margin: 20px;
 }
 
 /* Projects section */
+.projectslink{
+  color: #112d4e;
+  display: block;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  width: 88px;
+}
+
+.projectslink:after {
+  background: none repeat scroll 0 0 transparent;
+  background-color: #112d4e;
+  bottom: -1px;
+  content: "";
+  display: block;
+  height: 1.5px;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s, opacity 0.5s ease 0s;
+  width: 0;
+}
+
+.projectslink:hover:after, .projectslink:focus:after {
+  left: 0;
+  opacity: 1;
+  width: 100%;
+}
 
 .projgridwrap {
   display: flex;
@@ -243,7 +261,6 @@ a {
 }
 
 /* Sliedshow arrow styling */
-
 .arrow {
   border: 0;
   font-size: 2em;
@@ -269,7 +286,6 @@ a {
 }
 
 /* Project cards styling */
-
 .projectcard {
   border: 1px solid #112d4e;
   border-radius: 5px;
@@ -286,7 +302,7 @@ a {
 }
 
 .projectcardimg {
-  box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.3);
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   width: 270px;
 }
@@ -296,7 +312,7 @@ a {
 }
 
 .projectcard:hover {
-  box-shadow: 5px 3px 10px 2px rgba(0,0,0,0.1);
+  box-shadow: 5px 3px 10px 2px rgba(0, 0, 0, 0.1);
   transform: scale(1.03);
   transition: 0.3s ease;
 }
@@ -310,7 +326,6 @@ a {
 }
 
 /* Fade animation for slideshow */
-
 .fade {
   animation-name: fade;
   -webkit-animation-name: fade;
@@ -329,16 +344,14 @@ a {
 }
 
 /* Contact form section */
+.contactwrap {
+  display: flex;
+  justify-content: center;
+}
 
-  .contactwrap {
-    display: flex;
-    justify-content: center;
-  }
-
-  .letschat, .formbox {
-    width: 100%;
-  }
-
+.letschat, .formbox {
+  width: 100%;
+}
 
 .formItem {
   padding: 50px 0;
@@ -395,10 +408,9 @@ a {
 }
 
 /* About Me section */
-
 .aboutme img {
   border-radius: 5px;
-  box-shadow: 5px 3px 10px 2px rgba(0,0,0,0.15);
+  box-shadow: 5px 3px 10px 2px rgba(0, 0, 0, 0.15);
   width: 100%;
 }
 
@@ -410,7 +422,6 @@ a {
 }
 
 /* Footer */
-
 footer {
   background-color: #0B1D32;
   color: #f7f7f7;
@@ -449,7 +460,6 @@ footer a:hover, a:focus {
 }
 
 /* Thank you page */
-
 .thankyoubox {
   background-image: url('/assets/img/tybackground.jpg');
   background-position: center;
@@ -499,22 +509,18 @@ footer a:hover, a:focus {
 }
 
 /* Media Queries */
-
 @media (min-width: 525px) {
-  
   .intro h1 {
     font-weight: 100;
     padding: 450px 0;
     text-align: center;
     transition: 0.3s ease;
   }
-
 }
 
 @media (min-width: 768px) {
 
   /* Media queries for navbar and dropdown */
-
   .topbar {
     height: 80px;
   }
@@ -607,14 +613,12 @@ footer a:hover, a:focus {
   }
 
   /* Content wrap media queries */
-
   .content {
     margin: 30px auto;
     width: 760px;
   }
 
-/* Projects section media queries */
-
+  /* Projects section media queries */
   .projectsgrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -643,7 +647,6 @@ footer a:hover, a:focus {
   }
 
   /* About me section media queries */
-
   .aboutmewrap {
     display: flex;
     justify-content: center;
@@ -670,9 +673,7 @@ footer a:hover, a:focus {
   }
 
   /* Contact form media queries */
-
-/* Thank you page media queries */
-
+  /* Thank you page media queries */
   .thankyoubox h1 {
     color: #f7f7f7;
     margin: 0;
@@ -691,6 +692,7 @@ footer a:hover, a:focus {
     margin: 30px auto;
     width: 1010px;
   }
+
   .projectcard img {
     width: 300px;
   }
