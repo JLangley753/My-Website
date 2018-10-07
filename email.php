@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
   $message = $_POST['howicanhelp'];
 
   $subject = "You have received a new email.";
-  $mailTo = "jdklangley@outlook.com";
+  $mailTo = "info@joelangley.co.uk";
   $headers = "From: ".$mailFrom;
   $txt = "You have received an e-mail from ".$name.".\n\n".$message;
 
