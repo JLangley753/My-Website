@@ -23,7 +23,7 @@ a {
 }
 
 .content {
-  margin: 20px 10px;
+  margin: 30px 10px;
 }
 
 /* Header Section (includes navbar, dropdown and menu) */
@@ -228,7 +228,7 @@ a {
 
 /* Projects Section */
 .projectsSec {
-  margin: 0 10px;
+  margin: 0px 10px;
   width: auto;
 }
 
@@ -244,8 +244,11 @@ a {
 
 /* Project cards styling */
 .projectcard {
+  background-color: #f7f7f7;
+  border: 1px solid #112d4e;
+  border-radius: 5px;
   height: auto;
-  padding: 5px 10px;
+  padding: 15px 10px;
   width: auto
 }
 
@@ -424,14 +427,24 @@ footer a:hover, a:focus {
   }
 
   /* Content wrap media queries */
+  .projectsSec {
+    margin: 0px auto;
+    width: 760px;
+  }
+
   .content {
-    margin: 30px auto;
+    margin: 50px auto;
     width: 760px;
   }
 
   /* Projects section media queries */
   @media (min-width: 1200px) {
+    .projectsSec {
+      margin: 0px auto;
+      width: 1200px;
+    }
+
     .content {
-      margin: 30px auto;
+      margin: 50px auto;
       width: 1200px;
     }
