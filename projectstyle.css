@@ -244,8 +244,6 @@ a {
 
 /* Project cards styling */
 .projectcard {
-  background-color: white;
-  border: 1px solid #112d4e;
   border-radius: 5px;
   height: auto;
   padding: 15px 10px;
