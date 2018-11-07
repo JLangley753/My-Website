@@ -5,7 +5,7 @@ var dd = document.querySelector('.dd'); // dropdowm menu
 var bars = document.getElementsByClassName('bar');
 var barsArray = [].slice.call(bars);
 
-bm.onclick = openMenu
+bm.onclick = openMenu;
 
 function openMenu() {
 
@@ -29,12 +29,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         barsArray[i].classList.remove('changebar' + [i + 1]);
       }
   }, 600);
-})});
+  });
+});
 
 // Change navbar appearance on scroll
 
 window.onscroll = function() {
-  solidBar()
+  solidBar();
 };
 
 function solidBar() {
@@ -43,26 +44,26 @@ function solidBar() {
   var joe = document.querySelector('.lj');
   var sm = document.querySelector('.smwd');
 
-  var pcaItems = document.getElementsByClassName('pca');
-  var pcaArray = [].slice.call(pcaItems);
+  var navlinkItems = document.getElementsByClassName('navlink');
+  var nlArray = [].slice.call(navlinkItems);
 
   var solid = navbarswitch.offsetTop;
 
   if (window.pageYOffset >= solid) {
-    topbar.classList.add('solidnav')
-    dd.classList.add('changedd')
-    joe.classList.add('amendedjoe')
+    topbar.classList.add('solidnav');
+    dd.classList.add('changedd');
+    joe.classList.add('amendedjoe');
     sm.classList.add('smallsmwd');
-    for (var j = 0; j < pcaArray.length; j++) {
-      pcaArray[j].classList.add('changepca');
+    for (var j = 0; j < nlArray.length; j++) {
+      nlArray[j].classList.add('changenavlink');
     }
   } else {
-    topbar.classList.remove('solidnav')
+    topbar.classList.remove('solidnav');
     dd.classList.remove('changedd');
     joe.classList.remove('amendedjoe');
     sm.classList.remove('smallsmwd');
-    for (var j = 0; j < pcaArray.length; j++) {
-      pcaArray[j].classList.remove('changepca');
+    for (var k = 0; k < nlArray.length; k++) {
+      nlArray[k].classList.remove('changenavlink');
     }
   }
 }
@@ -83,10 +84,10 @@ function currentProj(n) {
 function showProj(n) {
     var projects = document.getElementsByClassName('projectcard');
     if (n > projects.length) {
-      projIndex = 1
+      projIndex = 1;
     }
     if (n < 1) {
-      projIndex = projects.length
+      projIndex = projects.length;
     }
     for (var k = 0; k < projects.length; k++) {
       projects[k].classList.add('deactivecard');
@@ -94,4 +95,26 @@ function showProj(n) {
     }
     projects[projIndex - 1].classList.remove('deactivecard');
     projects[projIndex - 1].classList.add('activecard');
-};
+}
+
+// Modal controls
+
+var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName('close')[0];
+
+function thankyoumodal() {
+  modal.classList.add('showmodal');
+  setTimeout(function closemodal() {
+    modal.classList.remove('showmodal');
+  }, 5000)
+}
+
+function closemodal() {
+  modal.classList.remove('showmodal');
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.classList.remove('showmodal');
+  }
+}

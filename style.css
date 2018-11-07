@@ -145,22 +145,22 @@ a {
   transition: 0.5s ease-in-out;
 }
 
-/* 'Projects, Contact, About' on navbar section styling */
-.pca {
+/* Navbar links section styling */
+.navlink {
   color: #f7f7f7;
   font-weight: 100;
   text-decoration: none;
 }
 
-.pca:after {
+.navlink:after {
   display: none;
 }
 
-.pca:after:hover {
+.navlink:after:hover {
   display: none;
 }
 
-.home, .projects, .contact, .about {
+.home, .projects, .contact, .about, .skills {
   color: #f7f7f7;
   font-weight: 100;
   margin: 3px;
@@ -206,7 +206,7 @@ a {
 
 .intro h1 {
   font-weight: 100;
-  padding: 300px 0;
+  padding: 360px 0;
   text-align: center;
   transition: 0.3s ease;
 }
@@ -228,6 +228,10 @@ a {
   position: relative;
   transition: 0.3s ease-in-out;
   width: 88px;
+}
+
+.projectslink h2 {
+  margin: 0;
 }
 
 .projectslink:after {
@@ -253,6 +257,7 @@ a {
 .projgridwrap {
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 
 .projectsgrid {
@@ -265,7 +270,7 @@ a {
   border: 0;
   font-size: 2em;
   height: 50px;
-  padding: 0 10px;
+  padding: 0;
 }
 
 .arrow:focus {
@@ -282,17 +287,43 @@ a {
   background-color: transparent;
   cursor: pointer;
   position: relative;
-  top: 140px;
+  margin: auto;
 }
 
 /* Project cards styling */
 .projectcard {
-  border: 1px solid #112d4e;
+  background-color: #f7f7f7;
   border-radius: 5px;
-  height: 330px;
+  height: auto;
+  overflow: hidden;
   padding: 5px 10px;
+  position: relative;
   transition: 0.3s ease;
-  width: 270px;
+  width: auto;
+}
+
+.projectcard:hover {
+  box-shadow: 5px 3px 10px 2px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.projectcard::after {
+  background-color: rgba(0, 0, 0, 0.03);
+  content: "";
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  transition: 0.3s ease;
+  transform: translateY(-50%) translateX(-50%);
+  width: 200%;
+  z-index: 5;
+}
+
+.projectcard:hover::after {
+  height: 400% !important;
+  opacity: 1;
+  top: 0%;
 }
 
 .projectcardimg {
@@ -304,17 +335,11 @@ a {
 .projectcardimg {
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  width: 270px;
+  width: 100%;
 }
 
 .projectcardimg img {
-  width: 270px;
-}
-
-.projectcard:hover {
-  box-shadow: 5px 3px 10px 2px rgba(0, 0, 0, 0.1);
-  transform: scale(1.03);
-  transition: 0.3s ease;
+  width: 100%;
 }
 
 .activecard {
@@ -401,7 +426,6 @@ a {
 
 .submitbutton:hover, .submitbutton:focus {
   background-color: #112d4e;
-  border-radius: 7px;
   color: #f7f7f7;
   cursor: pointer;
   transition: 0.3s ease;
@@ -419,6 +443,26 @@ a {
 .aboutme {
   position: relative;
   min-height: 200px;
+}
+
+/* Technologies section */
+
+.skillsGrid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.techicon {
+  filter: grayscale();
+  height: 36px;
+  transition: filter 0.5s ease;
+  width: auto;
+}
+
+.techicon:hover,
+.techicon:active {
+  filter: none;
+  transition: filter 0.5s ease;
 }
 
 /* Footer */
@@ -457,6 +501,52 @@ footer a:hover, a:focus {
 .footersocials a:hover {
   opacity: 0.65;
   transition: 0.3s ease-in-out;
+}
+
+/* Thank you modal */
+
+.modal {
+  background-color: rgba(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  transition: 0.5s ease;
+  width: 100%;
+  z-index: -1;
+}
+
+.showmodal {
+  opacity: 1;
+  z-index: 10;
+  transition: 0.5s ease;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border-radius: 5px;
+  margin: 30% auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.close {
+  color: rgba(17, 45, 78, 0.5);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: #112d4e;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
 /* Thank you page */
@@ -557,13 +647,13 @@ footer a:hover, a:focus {
     text-decoration: none;
   }
 
-  .home, .projects, .contact, .about {
+  .home, .projects, .contact, .about, .skills {
     font-size: 1em;
     padding: 0 5px;
     transition: 0.5s ease-in-out;
   }
 
-  .pca {
+  .navlink {
     display: block;
     font-weight: 100;
     margin: 20px 5px;
@@ -571,7 +661,7 @@ footer a:hover, a:focus {
     transition: 0.5s ease-in-out;
   }
 
-  .pca:after {
+  .navlink:after {
     background: none repeat scroll 0 0 transparent;
     background-color: #f7f7f7;
     bottom: -1px;
@@ -585,13 +675,13 @@ footer a:hover, a:focus {
     width: 0;
   }
 
-  .pca:hover:after, .pca:focus:after {
+  .navlink:hover:after, .navlink:focus:after {
     opacity: 1;
     left: 0;
     width: 100%;
   }
 
-  .changepca {
+  .changenavlink {
     font-weight: 100;
     margin: 10px 5px;
     transition: 0.5s ease-in-out;
@@ -626,16 +716,17 @@ footer a:hover, a:focus {
     grid-row-gap: 20px;
   }
 
+  .projectslink h2 {
+    margin: 10px 0;
+  }
+
   .projectcard img {
-    width: 210px;
   }
 
   .projectcardimg {
-    width: 210px;
   }
 
   .projectcard {
-    width: 210px;
   }
 
   .deactivecard {
@@ -672,7 +763,19 @@ footer a:hover, a:focus {
     max-width: 735px;
   }
 
+  /* Skills section media queries */
+
+  .skillsGrid {
+    justify-content: center;
+    margin: 20px auto;
+  }
+
+  .techicon {
+    margin: auto 20px;
+  }
+
   /* Contact form media queries */
+
   /* Thank you page media queries */
   .thankyoubox h1 {
     color: #f7f7f7;
@@ -694,15 +797,16 @@ footer a:hover, a:focus {
   }
 
   .projectcard img {
-    width: 300px;
   }
 
   .projectcardimg {
-    width: 300px;
   }
 
   .projectcard {
-    width: 300px;
+  }
+
+  .techicon {
+    margin: auto 40px;
   }
 
   .aboutme img {

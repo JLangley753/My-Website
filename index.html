@@ -28,17 +28,22 @@
         <div class="dropdownmenu dd">
           <div class="projects">
             <a href="projects.html">
-              <h2 class="pca">Projects</h2>
+              <h2 class="navlink">Projects</h2>
             </a>
           </div>
           <div class="about">
             <a href="#aboutme">
-              <h2 class="pca">About</h2>
+              <h2 class="navlink">About</h2>
+            </a>
+          </div>
+          <div class="skills">
+            <a href="#skills">
+              <h2 class="navlink">Skills</h2>
             </a>
           </div>
           <div class="contact">
             <a href="#contact">
-              <h2 class="pca">Contact</h2>
+              <h2 class="navlink">Contact</h2>
             </a>
           </div>
           <!-- Social media section of navbar -->
@@ -76,7 +81,6 @@
         <h2>Projects</h2>
       </a>
     </div>
-    <p>Click on the cards or the Projects link above to go to the projects page to find out more!</p>
     <div class="projgridwrap">
       <!-- Left navigation button -->
       <button class="leftArrow arrow" onclick="projCardSwitcher(-1)"><img src="/assets/img/leftarrow.png" alt="Left slideshow arrow"></button>
@@ -174,8 +178,6 @@
         <div class="aboutmetxt">
           <p>My name is Joe Langley, and I'm a front end web developer based in West London. I love to create websites from scratch that look great and respond well on all devices.</p>
           <p>When I'm not designing and creating projects, I love to travel, eat interesting food, discover new music and watch football!</p>
-          <p>I currently have good experience with HTML, CSS and Javascript. I have worked on a project using the React library and I have also utilised jQuery to create a dynamic user experience. Currently, I am working on a project using Node.js
-            so I can broaden my skills by picking up a back end language.</p>
           <p>At the moment, I am available to make bespoke websites for small businesses. If you like what you hear and see, drop me a message in the box below.</p>
         </div>
       </div>
@@ -183,6 +185,34 @@
   </section>
 
   <div class="pagebar content"></div>
+
+  <!-- Skills Section -->
+
+  <section class="skillsSec content" id="skills">
+    <h2>Skills</h2>
+    <p>While I specialise in front end development, I have enjoyed my exposure to back end technologies and design principles. Below you'll find what kind of skills and technologies I've picked up during my studies.</p>
+    <div class="skillsGrid">
+      <img src="/assets/img/techicons/html.png" class="techicon" alt="">
+      <img src="/assets/img/techicons/css.png" class="techicon" alt="">
+      <img src="/assets/img/techicons/javascript.png" class="techicon" alt="">
+      <img src="/assets/img/techicons/jquery.png" class="techicon" alt="">
+      <img src="/assets/img/techicons/react.png" class="techicon" alt="">
+      <img src="/assets/img/techicons/git.png" class="techicon" alt="">
+      <img src="/assets/img/techicons/nodejs.png" class="techicon" alt="">
+      <img src="/assets/img/techicons/php.png" class="techicon" alt="">
+    </div>
+  </section>
+
+  <div class="pagebar content"></div>
+
+  <!-- Thank you modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closemodal">&times;</span>
+      <h2>Form submitted!</h2>
+      <h3>Thank you for email, I will get back to you shortly.</h3>
+    </div>
+  </div>
 
   <!-- Contact us form section -->
   <section class="contactus content" id="contact">
@@ -193,7 +223,7 @@
           <input class="formbox" type="text" name="name" placeholder="Your name..">
           <input class="formbox" type="text" name="mail" placeholder="Your email..">
           <textarea name="howicanhelp" class="formbox letschat" cols="10" rows="4" placeholder="Let's chat.."></textarea>
-          <button type="submit" value="Submit" name="submit" class="submitbutton">Send</button>
+          <button id="" type="submit" class="submitbutton" value="Submit" name="submit">Send</button>
         </form>
       </div>
     </div>
