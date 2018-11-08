@@ -106,7 +106,9 @@ function thankyoumodal() {
   modal.classList.add('showmodal');
   setTimeout(function closemodal() {
     modal.classList.remove('showmodal');
-  }, 5000)
+    var form = document.getElementById('contactform');
+    form.reset();
+  }, 5000);
 }
 
 function closemodal() {
@@ -118,3 +120,21 @@ window.onclick = function(event) {
     modal.classList.remove('showmodal');
   }
 }
+
+$(document).ready(function() {
+  $('#contactbutton').click(function(e) {
+    e.preventDefault();
+    $.ajax({
+      type: 'POST',
+      url: 'email.php',
+      data: $('#contactform').serialize(),
+      success: function() {
+        console.log("Form submitted");
+        thankyoumodal();
+      },
+      error: function() {
+        console.log("Form submission unsuccessful");
+      }
+    });
+  });
+})

@@ -88,7 +88,7 @@
       <div class="projectsgrid">
         <!-- Noughts and Crosses div -->
         <a href="projects.html#noughtsandcrosses">
-          <div class="otherproject1 projectcard">
+          <div class="xsandos projectcard">
             <h3 class="fade">Noughts and Crosses</h3>
             <div class="projectcardimg fade">
               <img src="/assets/img/noughtsandcrosses.png" alt="A screenshot of the Noughts and Crosses game">
@@ -124,7 +124,7 @@
         </a>
         <!-- Academic Film and TV div -->
         <a href="projects.html#academicfilmandtv">
-          <div class="otherproject1 projectcard">
+          <div class="academicftv projectcard">
             <h3 class="fade">Academic Film & TV</h3>
             <div class="projectcardimg fade">
               <img src="/assets/img/academicfilmandtv.jpg" alt="A screenshot of the Academic Film and TV website">
@@ -136,7 +136,7 @@
         </a>
         <!-- Box A Photography div -->
         <a href="projects.html#boxaphotography">
-          <div class="otherproject1 projectcard">
+          <div class="boxaphoto projectcard">
             <h3 class="fade">Box A Photography</h3>
             <div class="projectcardimg fade">
               <img src="/assets/img/boxaphotography.jpg" alt="A screenshot of the Box A Photography website">
@@ -192,14 +192,38 @@
     <h2>Skills</h2>
     <p>While I specialise in front end development, I have enjoyed my exposure to back end technologies and design principles. Below you'll find what kind of skills and technologies I've picked up during my studies.</p>
     <div class="skillsGrid">
-      <img src="/assets/img/techicons/html.png" class="techicon" alt="">
-      <img src="/assets/img/techicons/css.png" class="techicon" alt="">
-      <img src="/assets/img/techicons/javascript.png" class="techicon" alt="">
-      <img src="/assets/img/techicons/jquery.png" class="techicon" alt="">
-      <img src="/assets/img/techicons/react.png" class="techicon" alt="">
-      <img src="/assets/img/techicons/git.png" class="techicon" alt="">
-      <img src="/assets/img/techicons/nodejs.png" class="techicon" alt="">
-      <img src="/assets/img/techicons/php.png" class="techicon" alt="">
+      <div class="tooltip">
+        <img src="/assets/img/techicons/html.png" class="techicon" alt="">
+        <span class="tooltiptext tthtml">HTML5</span>
+      </div>
+      <div class="tooltip">
+        <img src="/assets/img/techicons/css.png" class="techicon" alt="">
+        <span class="tooltiptext ttcss">CSS3</span>
+      </div>
+      <div class="tooltip">
+        <img src="/assets/img/techicons/javascript.png" class="techicon" alt="">
+        <span class="tooltiptext ttjs">JavaScript</span>
+      </div>
+      <div class="tooltip">
+        <img src="/assets/img/techicons/jquery.png" class="techicon" alt="">
+        <span class="tooltiptext">jQuery</span>
+      </div>
+      <div class="tooltip">
+        <img src="/assets/img/techicons/react.png" class="techicon" alt="">
+        <span class="tooltiptext ttreact">React</span>
+      </div>
+      <div class="tooltip">
+        <img src="/assets/img/techicons/git.png" class="techicon" alt="">
+        <span class="tooltiptext">Git</span>
+      </div>
+      <div class="tooltip">
+        <img src="/assets/img/techicons/nodejs.png" class="techicon" alt="">
+        <span class="tooltiptext ttnode">Node.js</span>
+      </div>
+      <div class="tooltip">
+        <img src="/assets/img/techicons/php.png" class="techicon" alt="">
+        <span class="tooltiptext ttphp">PHP</span>
+      </div>
     </div>
   </section>
 
@@ -219,11 +243,11 @@
     <h2>Contact</h2>
     <div class="contactwrap">
       <div class="contactformsection">
-        <form action="email.php" method="post">
+        <form id="contactform">
           <input class="formbox" type="text" name="name" placeholder="Your name..">
           <input class="formbox" type="text" name="mail" placeholder="Your email..">
           <textarea name="howicanhelp" class="formbox letschat" cols="10" rows="4" placeholder="Let's chat.."></textarea>
-          <button id="" type="submit" class="submitbutton" value="Submit" name="submit">Send</button>
+          <button id="contactbutton" type="submit" class="submitbutton" value="Submit" name="submit">Send</button>
         </form>
       </div>
     </div>
@@ -239,7 +263,7 @@
       <a href="https://twitter.com/TheJoeL573" target="_blank"><img src="/assets/img/tw.png" alt="Twitter"></a>
     </div>
   </footer>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="main.js"></script>
 
 </body>

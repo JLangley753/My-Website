@@ -222,7 +222,7 @@ a {
 }
 
 /* Projects section */
-.projectslink{
+.projectslink {
   color: #112d4e;
   display: block;
   position: relative;
@@ -293,6 +293,7 @@ a {
 /* Project cards styling */
 .projectcard {
   background-color: #f7f7f7;
+  border-top: 0px solid #ccc;
   border-radius: 5px;
   height: auto;
   overflow: hidden;
@@ -303,9 +304,8 @@ a {
 }
 
 .projectcard:hover {
-  box-shadow: 5px 3px 10px 2px rgba(0, 0, 0, 0.1);
-  border: 0.5px solid rgba(0,0,0,0.1);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 3px 5px 10px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
 }
 
 .projectcard::after {
@@ -333,7 +333,7 @@ a {
 }
 
 .projectcardimg {
-  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 100%;
 }
@@ -348,6 +348,32 @@ a {
 
 .deactivecard {
   display: none;
+}
+
+/* Individual project card hover styling */
+.xsandos:hover {
+  border-top: 15px solid #ccc;
+  transition: 0.3s ease;
+}
+
+.spinnerapp:hover {
+  border-top: 15px solid #155e63;
+  transition: 0.3s ease;
+}
+
+.cafejoe:hover {
+  border-top: 15px solid #3f5468;
+  transition: 0.3s ease;
+}
+
+.academicftv:hover {
+  border-top: 15px solid #00adb5;
+  transition: 0.3s ease;
+}
+
+.boxaphoto:hover {
+  border-top: 15px solid #428bca;
+  transition: 0.3s ease;
 }
 
 /* Fade animation for slideshow */
@@ -395,7 +421,7 @@ a {
 }
 
 .formbox:focus, .letschat:focus {
-  border-radius: 7px;
+  border: 1px solid #3f72af;
   outline: none;
   transition: 0.3s ease;
 }
@@ -446,7 +472,9 @@ a {
 }
 
 /* Technologies section */
-
+.skillsSec {
+  margin-bottom: 30px;
+}
 .skillsGrid {
   display: flex;
   justify-content: space-between;
@@ -463,6 +491,66 @@ a {
 .techicon:active {
   filter: none;
   transition: filter 0.5s ease;
+}
+
+.tooltip {
+  display: inline-block;
+  position: relative;
+}
+
+.tooltiptext {
+  background-color: #112d4e;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  color: #f7f7f7;
+  font-size: 0.6em;
+  opacity: 0;
+  padding: 5px 5px;
+  position: absolute;
+  text-align: center;
+  top: 110%;
+  transition: 0.3s ease;
+  visibility: hidden;
+  width: auto;
+  z-index: 1;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #112d4e transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+  transition: 0.3s ease;
+  visibility: visible;
+}
+
+.tthtml {
+  margin-left: -2px;
+}
+
+.ttcss {
+  margin-left: 2px;
+}
+
+.ttjs {
+  margin-left: -8px;
+}
+
+.ttnode {
+  margin-left: 8px;
+}
+
+.ttphp {
+  margin-left: 20px;
 }
 
 /* Footer */
@@ -504,17 +592,16 @@ footer a:hover, a:focus {
 }
 
 /* Thank you modal */
-
 .modal {
-  background-color: rgba(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
   left: 0;
   opacity: 0;
   overflow: auto;
   position: fixed;
   top: 0;
-  transition: 0.5s ease;
+  transition: 0.8s ease;
   width: 100%;
   z-index: -1;
 }
@@ -522,13 +609,13 @@ footer a:hover, a:focus {
 .showmodal {
   opacity: 1;
   z-index: 10;
-  transition: 0.5s ease;
+  transition: 0.8s ease;
 }
 
 .modal-content {
   background-color: #fefefe;
   border-radius: 5px;
-  margin: 30% auto;
+  margin: 15% auto;
   padding: 20px;
   width: 80%;
 }
@@ -720,14 +807,11 @@ footer a:hover, a:focus {
     margin: 10px 0;
   }
 
-  .projectcard img {
-  }
+  .projectcard img {}
 
-  .projectcardimg {
-  }
+  .projectcardimg {}
 
-  .projectcard {
-  }
+  .projectcard {}
 
   .deactivecard {
     display: block;
@@ -764,7 +848,6 @@ footer a:hover, a:focus {
   }
 
   /* Skills section media queries */
-
   .skillsGrid {
     justify-content: center;
     margin: 20px auto;
@@ -774,8 +857,31 @@ footer a:hover, a:focus {
     margin: auto 20px;
   }
 
-  /* Contact form media queries */
+  .tooltiptext {
+    margin-left: 18px;
+  }
 
+  .ttnode {
+    margin-left: 26px;
+  }
+
+  .ttjs {
+    margin-left: 13px;
+  }
+
+  .ttreact {
+    margin-left: 22px;
+  }
+
+  .ttphp {
+    margin-left: 38px;
+  }
+
+  .ttcss {
+    margin-left: 23px;
+  }
+
+  /* Contact form media queries */
   /* Thank you page media queries */
   .thankyoubox h1 {
     color: #f7f7f7;
@@ -796,17 +902,38 @@ footer a:hover, a:focus {
     width: 1010px;
   }
 
-  .projectcard img {
-  }
+  .projectcard img {}
 
-  .projectcardimg {
-  }
+  .projectcardimg {}
 
-  .projectcard {
-  }
+  .projectcard {}
 
   .techicon {
     margin: auto 40px;
+  }
+
+  .tooltiptext {
+    margin-left: 38px;
+  }
+
+  .ttcss {
+    margin-left: 42px;
+  }
+
+  .ttjs {
+    margin-left: 33px;
+  }
+
+  .ttreact {
+    margin-left: 42px;
+  }
+
+  .ttnode {
+    margin-left: 48px;
+  }
+
+  .ttphp {
+    margin-left: 59px;
   }
 
   .aboutme img {

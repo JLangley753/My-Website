@@ -160,17 +160,17 @@ a {
 }
 
 /* 'Home, Contact, About' on navbar section styling */
-.pca {
+.navlink {
   color: #f7f7f7;
   font-weight: 100;
   text-decoration: none;
 }
 
-.pca:after {
+.navlink:after {
   display: none;
 }
 
-.pca:after:hover {
+.navlink:after:hover {
   display: none;
 }
 
@@ -384,7 +384,7 @@ footer a:hover, a:focus {
     transition: 0.5s ease-in-out;
   }
 
-  .pca {
+  .navlink {
     display: block;
     font-weight: 100;
     margin: 20px 5px;
@@ -392,7 +392,7 @@ footer a:hover, a:focus {
     transition: 0.5s ease-in-out;
   }
 
-  .pca:after {
+  .navlink:after {
     background: none repeat scroll 0 0 transparent;
     background-color: #f7f7f7;
     bottom: 1px;
@@ -406,13 +406,13 @@ footer a:hover, a:focus {
     width: 0;
   }
 
-  .pca:hover:after, .pca:focus:after {
+  .navlink:hover:after, .navlink:focus:after {
     opacity: 1;
     left: 0;
     width: 100%;
   }
 
-  .changepca {
+  .changenavlink {
     font-weight: 100;
     margin: 10px 5px;
     transition: 0.5s ease-in-out;
