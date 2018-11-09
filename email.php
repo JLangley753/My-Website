@@ -9,7 +9,7 @@ $message = isset($_POST['howicanhelp']) ? $_POST['howicanhelp'] : null;
   $mailTo = "info@joelangley.co.uk";
   $headers = "From: ".$mailFrom;
 
-  $txt = "You have received an e-mail from ".$name.".\n\n".$message;
+  $txt = "You have received an e-mail from ".$name.".\n\n"."Here's the message: ".$message;
 
   mail($mailTo, $subject, $txt, $headers);
 ?>
