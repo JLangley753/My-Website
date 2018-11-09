@@ -20,15 +20,13 @@ function openMenu() {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
     setTimeout(function closeMenu() {
       dd.classList.remove('ddshow');
       for (var i = 0; i < barsArray.length; i++) {
         barsArray[i].classList.remove('changebar' + [i + 1]);
       }
-  }, 600);
+    }, 600);
   });
 });
 
@@ -82,19 +80,19 @@ function currentProj(n) {
 }
 
 function showProj(n) {
-    var projects = document.getElementsByClassName('projectcard');
-    if (n > projects.length) {
-      projIndex = 1;
-    }
-    if (n < 1) {
-      projIndex = projects.length;
-    }
-    for (var k = 0; k < projects.length; k++) {
-      projects[k].classList.add('deactivecard');
-      projects[k].classList.remove('activecard');
-    }
-    projects[projIndex - 1].classList.remove('deactivecard');
-    projects[projIndex - 1].classList.add('activecard');
+  var projects = document.getElementsByClassName('projectcard');
+  if (n > projects.length) {
+    projIndex = 1;
+  }
+  if (n < 1) {
+    projIndex = projects.length;
+  }
+  for (var k = 0; k < projects.length; k++) {
+    projects[k].classList.add('deactivecard');
+    projects[k].classList.remove('activecard');
+  }
+  projects[projIndex - 1].classList.remove('deactivecard');
+  projects[projIndex - 1].classList.add('activecard');
 }
 
 // Modal controls
@@ -126,13 +124,7 @@ function validateForm() {
     setTimeout(function autoclosesad() {
       sadmodal.classList.remove('showmodal');
     }, 2800);
-    return false;
-  }
-}
-
-$(document).ready(function() {
-  $('#contactbutton').click(function(e) {
-    e.preventDefault();
+  } else if (a || b || c) {
     $.ajax({
       type: 'POST',
       url: 'email.php',
@@ -145,6 +137,12 @@ $(document).ready(function() {
         console.log("Form submission unsuccessful");
       }
     });
+  }
+}
+
+$(document).ready(function() {
+  $('#contactbutton').click(function(e) {
+    e.preventDefault();
     validateForm();
   });
 })
