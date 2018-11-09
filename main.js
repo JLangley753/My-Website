@@ -100,24 +100,33 @@ function showProj(n) {
 // Modal controls
 
 var modal = document.getElementById('myModal');
-var span = document.getElementsByClassName('close')[0];
+var form = document.getElementById('contactform');
+var sadmodal = document.getElementById('sadModal');
 
 function thankyoumodal() {
   modal.classList.add('showmodal');
-  setTimeout(function closemodal() {
+  setTimeout(function autoclose() {
     modal.classList.remove('showmodal');
-    var form = document.getElementById('contactform');
     form.reset();
-  }, 5000);
-}
-
-function closemodal() {
-  modal.classList.remove('showmodal');
+  }, 3000);
 }
 
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.classList.remove('showmodal');
+  }
+}
+
+function validateForm() {
+  var a = document.forms['contactform']['name'].value;
+  var b = document.forms['contactform']['mail'].value;
+  var c = document.forms['contactform']['howicanhelp'].value;
+  if (!a || !b || !c) {
+    sadmodal.classList.add('showmodal');
+    setTimeout(function autoclosesad() {
+      sadmodal.classList.remove('showmodal');
+    }, 2800);
+    return false;
   }
 }
 
@@ -136,5 +145,6 @@ $(document).ready(function() {
         console.log("Form submission unsuccessful");
       }
     });
+    validateForm();
   });
 })
