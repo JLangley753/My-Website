@@ -630,55 +630,6 @@ footer a:hover, a:focus {
   text-align: center;
 }
 
-/* Thank you page */
-.thankyoubox {
-  background-image: url('/assets/img/tybackground.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 1080px;
-  font-weight: 100;
-  display: block;
-  z-index: -1;
-}
-
-.thankyoubox h1 {
-  color: #f7f7f7;
-  font-weight: 100;
-  margin: 0;
-  padding: 50px 50px 30px 50px;
-}
-
-.thankyoubox h2 {
-  font-weight: 100;
-  margin: 0;
-  padding: 10px 50px;
-}
-
-.thankyoubox a {
-  color: #112d4e;
-  position: relative;
-  transition: 0.3s ease-in-out;
-}
-
-.thankyoubox a:after {
-  background: none repeat scroll 0 0 transparent;
-  background-color: #112d4e;
-  bottom: 0px;
-  content: "";
-  display: block;
-  height: 1.5px;
-  left: 50%;
-  position: absolute;
-  transition: width 0.5s ease 0s, left 0.5s ease 0s;
-  width: 0;
-}
-
-.thankyoubox a:hover:after, a:focus:after {
-  left: 0;
-  width: 100%;
-}
-
 /* Media Queries */
 @media (min-width: 525px) {
   .intro h1 {
