@@ -98,13 +98,17 @@ function showProj(n) {
 // Modal controls
 
 var modal = document.getElementById('myModal');
+var tyModalContent = document.getElementById('tyModalContent');
 var form = document.getElementById('contactform');
 var sadmodal = document.getElementById('sadModal');
+var sadModalContent = document.getElementById('sadModalContent');
 
 function thankyoumodal() {
   modal.classList.add('showmodal');
+  tyModalContent.classList.add('show-modal-content');
   setTimeout(function autoclose() {
     modal.classList.remove('showmodal');
+    tyModalContent.classList.remove('show-modal-content');
     form.reset();
   }, 2800);
 }
@@ -112,6 +116,7 @@ function thankyoumodal() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.classList.remove('showmodal');
+    tyModalContent.classList.remove('show-modal-content');
   }
 }
 
@@ -121,8 +126,10 @@ function validateForm() {
   var c = document.forms['contactform']['howicanhelp'].value;
   if (!a || !b || !c) {
     sadmodal.classList.add('showmodal');
+    sadModalContent.classList.add('show-modal-content');
     setTimeout(function autoclosesad() {
       sadmodal.classList.remove('showmodal');
+      sadModalContent.classList.remove('show-modal-content');
     }, 2800);
   } else if (a || b || c) {
     $.ajax({
