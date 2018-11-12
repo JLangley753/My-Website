@@ -106,7 +106,7 @@ function thankyoumodal() {
   setTimeout(function autoclose() {
     modal.classList.remove('showmodal');
     form.reset();
-  }, 3000);
+  }, 2800);
 }
 
 window.onclick = function(event) {

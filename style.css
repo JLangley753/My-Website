@@ -376,6 +376,11 @@ a {
   transition: 0.3s ease;
 }
 
+.tmc:hover {
+  border-top: 15px solid #d9534f;
+  transition: 0.3s ease;
+}
+
 /* Fade animation for slideshow */
 .fade {
   animation-name: fade;
@@ -482,9 +487,11 @@ a {
 .skillsSec {
   margin-bottom: 30px;
 }
+
 .skillsGrid {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 20px;
 }
 
 .techicon {
@@ -600,7 +607,7 @@ footer a:hover, a:focus {
 /* Thank you modal */
 .modal {
   background-color: rgba(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   left: 0;
   opacity: 0;
@@ -621,9 +628,10 @@ footer a:hover, a:focus {
 .modal-content {
   background-color: #fefefe;
   border-radius: 5px;
-  margin: 25% auto;
+  border-top: 15px solid #112d4e;
+  margin: 35% auto;
   padding: 20px;
-  width: 60%;
+  width: 70%;
 }
 
 .sadmodal {
@@ -631,6 +639,13 @@ footer a:hover, a:focus {
 }
 
 /* Media Queries */
+@media (min-width: 425px) {
+  .skillsGrid {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 @media (min-width: 525px) {
   .intro h1 {
     font-weight: 100;
