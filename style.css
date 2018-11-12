@@ -34,7 +34,7 @@ a {
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 10;
 }
 
 .navbarswitch {
@@ -490,8 +490,8 @@ a {
 
 .skillsGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-row-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 30px;
 }
 
 .techicon {
@@ -509,6 +509,7 @@ a {
 .tooltip {
   display: inline-block;
   position: relative;
+  margin: auto;
 }
 
 .tooltiptext {
@@ -554,6 +555,10 @@ a {
   margin-left: 2px;
 }
 
+.ttgit {
+  margin-left: -3px;
+}
+
 .ttjs {
   margin-left: -8px;
 }
@@ -564,6 +569,14 @@ a {
 
 .ttphp {
   margin-left: 20px;
+}
+
+.ttexpress {
+  margin-left: -8px;
+}
+
+.ttmongo {
+  margin-left: -7px;
 }
 
 /* Footer */
@@ -839,6 +852,17 @@ footer a:hover, a:focus {
 
   .ttcss {
     margin-left: 23px;
+  }
+
+  .ttgit {
+  }
+
+  .ttexpress {
+    margin-left: 13px;
+  }
+
+  .ttmongo {
+    margin-left: 13px;
   }
 
   /* Contact form media queries */
