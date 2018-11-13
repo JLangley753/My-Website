@@ -123,11 +123,10 @@ a {
 .dropdownmenu {
   background: rgba(17, 45, 78, 0);
   opacity: 0;
-  overflow: none;
   position: fixed;
   text-align: center;
   top: 80px;
-  transition: 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   width: 100%;
   visibility: hidden;
   z-index: 10;
@@ -135,7 +134,7 @@ a {
 
 .ddshow {
   opacity: 1;
-  transition: 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   visibility: visible;
 }
 
@@ -186,12 +185,12 @@ a {
 
 .socialmedia a {
   opacity: 1;
-  transition: 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .socialmedia a:hover, a:focus {
   opacity: 0.65;
-  transition: 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* Intro text section */
@@ -318,6 +317,14 @@ a {
   transform: translateY(-50%) translateX(-50%);
   width: 200%;
   z-index: 5;
+}
+
+.projectcard h3 {
+  font-size: 1.3em;
+}
+
+.projectcardtxt {
+  font-size: 1em;
 }
 
 .projectcard:hover::after {
@@ -468,7 +475,7 @@ a {
 
 .letschat:active, .letschat:focus {
   border-bottom: 1px solid rgba(17, 45, 78, 1);
-  height: 100px;
+  height: 130px;
   transition: 0.3s ease;
 }
 
@@ -486,7 +493,7 @@ a {
   min-height: 200px;
 }
 
-/* Technologies section */
+/* Skill section */
 .skillsSec {
   margin-bottom: 30px;
 }
@@ -699,12 +706,15 @@ footer a:hover, a:focus {
     justify-content: flex-end;
     position: fixed;
     height: 80px;
-    opacity: 1;
     top: 0;
-    transition: 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, visiblity 0s ease-in-out;
     visibility: visible;
     width: 100%;
     z-index: 10;
+  }
+
+  .dd {
+    opacity: 1;
   }
 
   .changedd {
@@ -774,7 +784,7 @@ footer a:hover, a:focus {
   /* Content wrap media queries */
   .content {
     margin: 30px auto;
-    width: 760px;
+    width: 730px;
   }
 
   /* Projects section media queries */
@@ -788,6 +798,15 @@ footer a:hover, a:focus {
   .projectslink h2 {
     margin: 10px 0;
   }
+
+  .projectcard h3 {
+    font-size: 1.05em;
+  }
+
+  .projectcardtxt {
+    font-size: 1em;
+  }
+
 
   .projectcard img {}
 
@@ -840,45 +859,45 @@ footer a:hover, a:focus {
   }
 
   .tooltiptext {
-    margin-left: 18px;
+    margin-left: 9px;
   }
 
   .ttnode {
-    margin-left: 26px;
+    margin-left: 18px;
   }
 
   .ttjs {
-    margin-left: 13px;
+    margin-left: 3px;
   }
 
   .ttreact {
-    margin-left: 22px;
+    margin-left: 12px;
   }
 
   .ttphp {
-    margin-left: 38px;
+    margin-left: 31px;
   }
 
   .ttcss {
-    margin-left: 23px;
+    margin-left: 12px;
   }
 
   .ttgit {
   }
 
   .ttexpress {
-    margin-left: 13px;
+    margin-left: 3px;
   }
 
   .ttmongo {
-    margin-left: 13px;
+    margin-left: 3px;
   }
 
   /* Contact form media queries */
   .modal-content {
     margin: 15% auto;
     padding: auto 0;
-    width: 720px;
+    width: 690px;
   }
 
 @media (min-width: 1200px) {

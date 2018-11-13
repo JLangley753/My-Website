@@ -174,7 +174,7 @@ a {
   display: none;
 }
 
-.home {
+.home, .projects, .contact, .about, .skills {
   color: #f7f7f7;
   font-weight: 100;
   margin: 3px;
@@ -218,7 +218,7 @@ a {
 }
 
 .titles {
-  padding: 200px 0;
+  padding: 329px 0;
 }
 
 .myprojectstitle h1, h2 {
@@ -308,7 +308,6 @@ a {
 }
 
 /* Fading animation */
-
 .fade {
   -webkit-animation: fade 15s;
   animation: fade 10s;
@@ -450,7 +449,7 @@ footer a:hover, a:focus {
     text-decoration: none;
   }
 
-  .home {
+  .home, .projects, .contact, .about, .skills {
     font-size: 1em;
     padding: 0 5px;
     transition: 0.5s ease-in-out;
@@ -513,6 +512,10 @@ footer a:hover, a:focus {
 
   /* Projects section media queries */
   @media (min-width: 1200px) {
+    .titles {
+      padding: 175px 0;
+    }
+
     .projectsSec {
       margin: 0px auto;
       width: 1200px;
