@@ -689,10 +689,12 @@ footer a:hover, a:focus {
   /* Media queries for navbar and dropdown */
   .topbar {
     height: 80px;
+    transition: 0.5s ease-in-out;
   }
 
   .solidnav {
     background-color: rgba(17, 45, 78, 0.97);
+    transition: 0.5s ease-in-out;
     height: 58px;
   }
 
@@ -707,7 +709,7 @@ footer a:hover, a:focus {
     position: fixed;
     height: 80px;
     top: 0;
-    transition: opacity 0.5s ease-in-out, visiblity 0s ease-in-out;
+    transition: 0.5s ease-in-out;
     visibility: visible;
     width: 100%;
     z-index: 10;

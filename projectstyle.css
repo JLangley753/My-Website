@@ -415,10 +415,12 @@ footer a:hover, a:focus {
   /* Media queries for navbar and dropdown */
   .topbar {
     height: 80px;
+    transition: 0.5s ease-in-out;
   }
 
   .solidnav {
     background-color: rgba(17, 45, 78, 0.97);
+    transition: 0.5s ease-in-out;
     height: 58px;
   }
 
@@ -442,6 +444,7 @@ footer a:hover, a:focus {
 
   .changedd {
     height: 58px;
+    transition: 0.5s ease-in-out;
   }
 
   .dropdownmenu a {
