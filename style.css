@@ -388,6 +388,11 @@ a {
   transition: 0.3s ease;
 }
 
+.mywebsite:hover {
+  border-top: 15px solid #112d4e;
+  transition: 0.3s ease;
+}
+
 /* Fade animation for slideshow */
 .fade {
   animation-name: fade;
