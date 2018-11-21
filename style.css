@@ -374,7 +374,7 @@ a {
 }
 
 .academicftv:hover {
-  border-top: 15px solid #00adb5;
+  border-top: 15px solid #393e46;
   transition: 0.3s ease;
 }
 
@@ -776,11 +776,6 @@ footer a:hover, a:focus {
   .smallsmwd {
     margin: 5px;
     transition: 0.5s ease-in-out;
-  }
-
-  .intro h2 {
-    padding: 450px 0;
-    font-size: 2em;
   }
 
   /* Content wrap media queries */

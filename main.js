@@ -91,6 +91,7 @@ function showProj(n) {
     projects[k].classList.add('deactivecard');
     projects[k].classList.remove('activecard');
   }
+
   projects[projIndex - 1].classList.remove('deactivecard');
   projects[projIndex - 1].classList.add('activecard');
 }
