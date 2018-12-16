@@ -34,7 +34,7 @@ a {
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 6;
+  z-index: 15;
 }
 
 .navbarswitch {
@@ -254,6 +254,7 @@ a {
 .projgridwrap {
   display: flex;
   justify-content: center;
+  position: relative;
   margin: 0;
 }
 
@@ -264,10 +265,17 @@ a {
 
 /* Sliedshow arrow styling */
 .arrow {
+  background-color: rgba(255,255,255,0.3);
   border: 0;
+  border-radius: 50%;
   font-size: 2em;
-  height: 50px;
+  height: 60px;
+  margin: 50px 0;
   padding: 0;
+  position: absolute;
+  cursor: pointer;
+  top: 32%;
+  z-index: 8;
 }
 
 .arrow:focus {
@@ -275,16 +283,18 @@ a {
 }
 
 .arrow img {
-  height: 50px;
+  background-color: transparent;
+  height: 60px;
   padding: 0;
-  width: 30px;
+  width: 60px;
 }
 
-.leftArrow, .rightArrow {
-  background-color: transparent;
-  cursor: pointer;
-  position: relative;
-  margin: auto;
+.leftArrow {
+  left: 1px;
+}
+
+.rightArrow {
+  right: 1px;
 }
 
 /* Project cards styling */
@@ -294,7 +304,7 @@ a {
   border-radius: 5px;
   height: auto;
   overflow: hidden;
-  padding: 5px 10px;
+  padding: 5px 0px;
   position: relative;
   transition: 0.3s ease;
   width: auto;
@@ -302,6 +312,7 @@ a {
 
 .projectcard:hover {
   box-shadow: 3px 5px 10px 5px rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
   transition: 0.3s ease;
 }
 
@@ -509,9 +520,6 @@ a {
 }
 
 /* Contact form section */
-.formItem {
-  padding: 50px 0;
-}
 
 .formbox {
   background-color: transparent;
@@ -674,12 +682,12 @@ footer a:hover, a:focus {
 .modal {
   background-color: rgba(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.5);
-  height: 130%;
+  height: 160%;
   left: 0;
   opacity: 0;
   overflow: auto;
   position: fixed;
-  top: -250px;
+  top: -100px;
   transition: 0.8s ease;
   width: 100%;
   z-index: -1;

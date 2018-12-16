@@ -2,7 +2,7 @@
 
 var bm = document.querySelector('.bm'); // burger menu
 var dd = document.querySelector('.dd'); // dropdowm menu
-var bars = document.getElementsByClassName('bar');
+var bars = document.querySelectorAll('.bar');
 var barsArray = [].slice.call(bars);
 
 bm.onclick = openMenu;
@@ -42,7 +42,7 @@ function solidBar() {
   var joe = document.querySelector('.lj');
   var sm = document.querySelector('.smwd');
 
-  var navlinkItems = document.getElementsByClassName('navlink');
+  var navlinkItems = document.querySelectorAll('.navlink');
   var nlArray = [].slice.call(navlinkItems);
 
   var solid = navbarswitch.offsetTop;
@@ -80,7 +80,7 @@ function currentProj(n) {
 }
 
 function showProj(n) {
-  var projects = document.getElementsByClassName('projectcard');
+  var projects = document.querySelectorAll('.projectcard');
   if (n > projects.length) {
     projIndex = 1;
   }
@@ -98,11 +98,11 @@ function showProj(n) {
 
 // Modal controls
 
-var modal = document.getElementById('myModal');
-var tyModalContent = document.getElementById('tyModalContent');
-var form = document.getElementById('contactform');
-var sadmodal = document.getElementById('sadModal');
-var sadModalContent = document.getElementById('sadModalContent');
+var modal = document.querySelector('#myModal');
+var tyModalContent = document.querySelector('#tyModalContent');
+var form = document.querySelector('#contactform');
+var sadmodal = document.querySelector('#sadModal');
+var sadModalContent = document.querySelector('#sadModalContent');
 
 function thankyoumodal() {
   modal.classList.add('showmodal');
