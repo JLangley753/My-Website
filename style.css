@@ -166,8 +166,9 @@ a {
 }
 
 /* Social Media section  */
-.socialmediawrap {
+.socialmediawrapbig {
   margin: 7px;
+  margin-bottom: 17px;
 }
 
 .socialmedia {
