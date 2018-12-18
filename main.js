@@ -121,6 +121,13 @@ window.onclick = function(event) {
   }
 }
 
+var contactbutton = document.querySelector('#contactbutton');
+
+contactbutton.onclick = function(e) {
+  e.preventDefault();
+  validateForm();
+}
+
 function validateForm() {
   var a = document.forms['contactform']['name'].value;
   var b = document.forms['contactform']['mail'].value;
@@ -133,24 +140,17 @@ function validateForm() {
       sadModalContent.classList.remove('show-modal-content');
     }, 2800);
   } else if (a || b || c) {
-    $.ajax({
-      type: 'POST',
-      url: 'email.php',
-      data: $('#contactform').serialize(),
-      success: function() {
-        console.log("Form submitted");
+    var form = document.querySelector('#contactform');
+    var data = new FormData(form);
+    var request = new XMLHttpRequest();
+    request.open('POST', 'email.php', true);
+    request.send(data);
+
+    request.onreadystatechange = function() {
+      if (request.readyState == 4 && request.status == 200) {
         thankyoumodal();
-      },
-      error: function() {
-        console.log("Form submission unsuccessful");
       }
-    });
+    }
+    request.onerror = function() {}
   }
 }
-
-$(document).ready(function() {
-  $('#contactbutton').click(function(e) {
-    e.preventDefault();
-    validateForm();
-  });
-})
