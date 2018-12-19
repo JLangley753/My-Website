@@ -271,11 +271,10 @@ a {
   border-radius: 50%;
   font-size: 2em;
   height: 60px;
-  margin: 50px 0;
   padding: 0;
   position: absolute;
   cursor: pointer;
-  top: 32%;
+  top: 42%;
   z-index: 8;
 }
 
@@ -305,28 +304,10 @@ a {
   border-radius: 5px;
   height: auto;
   overflow: hidden;
-  padding: 5px 0px;
+  padding: 0px;
   position: relative;
   transition: 0.3s ease;
   width: auto;
-}
-
-.projectcard:hover {
-  box-shadow: 3px 5px 10px 5px rgba(0, 0, 0, 0.1);
-  padding: 5px 10px;
-  transition: 0.3s ease;
-}
-
-.projectcard::after {
-  content: "";
-  height: 100%;
-  position: absolute;
-  opacity: 0;
-  top: 50%;
-  transition: 0.3s ease;
-  transform: translateY(-50%) translateX(-50%);
-  width: 200%;
-  z-index: 5;
 }
 
 .projectcard h3 {
@@ -334,13 +315,8 @@ a {
 }
 
 .projectcardtxt {
+  display: none;
   font-size: 1em;
-}
-
-.projectcard:hover::after {
-  height: 400% !important;
-  opacity: 1;
-  top: 0%;
 }
 
 .projectcardimg {
@@ -365,35 +341,6 @@ a {
 
 .deactivecard {
   display: none;
-}
-
-/* Individual project card hover styling */
-.xsandos:hover {
-  border-top: 15px solid #ccc;
-}
-
-.spinnerapp:hover {
-  border-top: 15px solid #155e63;
-}
-
-.cafejoe:hover {
-  border-top: 15px solid #3f5468;
-}
-
-.academicftv:hover {
-  border-top: 15px solid #393e46;
-}
-
-.boxaphoto:hover {
-  border-top: 15px solid #428bca;
-}
-
-.tmc:hover {
-  border-top: 15px solid #d9534f;
-}
-
-.mywebsite:hover {
-  border-top: 15px solid #112d4e;
 }
 
 /* Fade animation for slideshow */
@@ -691,6 +638,7 @@ footer a:hover, a:focus {
   top: -100px;
   transition: 0.8s ease;
   width: 100%;
+  visibility: hidden;
   z-index: -1;
 }
 
@@ -698,6 +646,7 @@ footer a:hover, a:focus {
   opacity: 1;
   top: 0;
   transition: 0.8s ease;
+  visibility: visible;
   z-index: 10;
 }
 
@@ -708,11 +657,13 @@ footer a:hover, a:focus {
   margin: 35% 20px;
   padding: 20px;
   transition: 0.8s ease;
+  visibility: hidden;
   width: auto;
 }
 
 .show-modal-content {
   transition: 0.8s ease;
+  visibility: visible;
 }
 
 .sadmodal {
@@ -844,16 +795,123 @@ footer a:hover, a:focus {
     grid-row-gap: 15px;
   }
 
+  .projectslink {
+    margin-bottom: 30px;
+  }
+
   .projectslink h2 {
     margin: 10px 0;
   }
 
   .projectcard h3 {
-    font-size: 1.05em;
+    display: none;
   }
 
   .projectcardtxt {
     font-size: 1em;
+  }
+
+  .projectcard:hover {
+    box-shadow: 3px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+  }
+
+  .projectcard::before {
+    content: "";
+    height: 200%;
+    position: absolute;
+    opacity: 0;
+    top: 0%;
+    transition: 0.3s ease;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .projectcard::after {
+    color: #f7f7f7;
+    content: "";
+    font-size: 32px;
+    height: 200%;
+    position: absolute;
+    opacity: 0;
+    text-align: center;
+    top: 50%;
+    transition: 0.3s ease;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .projectcard:hover::before, .projectcard:hover::after {
+    height: 400%;
+    top: 0%;
+    opacity: 1;
+    transition: 0.3s ease;
+  }
+
+  .projectcard:hover::after {
+    top: 38%;
+    opacity: 1;
+  }
+
+  /* Individual project card hover styling */
+  .xsandos:hover::before {
+    background-color: #aaa;
+  }
+
+  .xsandos::after {
+    content: "Noughts and Crosses";
+  }
+
+  .tmc:hover::before {
+    background-color: #d9534f;
+  }
+
+  .tmc:hover::after {
+    top: 35%;
+  }
+
+  .tmc::after {
+    content: "Tom's Marvellous Cocktails";
+  }
+
+  .spinnerapp:hover::before {
+    background-color: #155e63;
+  }
+
+  .spinnerapp::after {
+    content: "Spinner Wheel";
+  }
+
+  .cafejoe:hover::before {
+    background-color: #3f5468;
+  }
+
+  .cafejoe::after {
+    content: "Joe's Cafe";
+  }
+
+  .academicftv::after {
+    content: "Academic Film and TV";
+  }
+
+  .academicftv:hover::before {
+    background-color: #393e46;
+  }
+
+  .boxaphoto::after {
+    content: "Box A Photography";
+  }
+
+  .boxaphoto:hover::before {
+    background-color: #428bca;
+  }
+
+  .mywebsite::after {
+    content: "My Website";
+  }
+
+  .mywebsite:hover::before {
+    background-color: #112d4e;
   }
 
   .projectcard img {}
@@ -958,6 +1016,11 @@ footer a:hover, a:focus {
     .projectcardimg {}
 
     .projectcard {}
+
+    .projectcard:hover::after {
+      top: 42%;
+      opacity: 1;
+    }
 
     .techicon {
       margin: auto 30px;
