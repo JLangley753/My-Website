@@ -3,16 +3,15 @@
 var bm = document.querySelector('.bm'); // burger menu
 var dd = document.querySelector('.dd'); // dropdowm menu
 var bars = document.querySelectorAll('.bar');
-var barsArray = [].slice.call(bars);
 
 bm.onclick = openMenu;
 
 function openMenu() {
 
   dd.classList.toggle('ddshow');
-  for (var i = 0; i < barsArray.length; i++) {
-    barsArray[i].classList.toggle('changebar' + [i + 1]);
-  }
+  bars.forEach(function(element, i) {
+    element.classList.toggle('changebar' + [i + 1]);
+  })
 }
 
 // Scroll to section on click
@@ -20,12 +19,14 @@ function openMenu() {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
     setTimeout(function closeMenu() {
       dd.classList.remove('ddshow');
-      for (var i = 0; i < barsArray.length; i++) {
-        barsArray[i].classList.remove('changebar' + [i + 1]);
-      }
+      bars.forEach(function(element, i) {
+        element.classList.remove('changebar' + [i + 1]);
+      })
     }, 600);
   });
 });
@@ -43,7 +44,6 @@ function solidBar() {
   var sm = document.querySelector('.smwd');
 
   var navlinkItems = document.querySelectorAll('.navlink');
-  var nlArray = [].slice.call(navlinkItems);
 
   var solid = navbarswitch.offsetTop;
 
@@ -52,17 +52,17 @@ function solidBar() {
     dd.classList.add('changedd');
     joe.classList.add('amendedjoe');
     sm.classList.add('smallsmwd');
-    for (var j = 0; j < nlArray.length; j++) {
-      nlArray[j].classList.add('changenavlink');
-    }
+    navlinkItems.forEach(function(element) {
+      element.classList.add('changenavlink');
+    })
   } else {
     topbar.classList.remove('solidnav');
     dd.classList.remove('changedd');
     joe.classList.remove('amendedjoe');
     sm.classList.remove('smallsmwd');
-    for (var k = 0; k < nlArray.length; k++) {
-      nlArray[k].classList.remove('changenavlink');
-    }
+    navlinkItems.forEach(function(element) {
+      element.classList.remove('changenavlink');
+    })
   }
 }
 
@@ -87,11 +87,10 @@ function showProj(n) {
   if (n < 1) {
     projIndex = projects.length;
   }
-  for (var k = 0; k < projects.length; k++) {
-    projects[k].classList.add('deactivecard');
-    projects[k].classList.remove('activecard');
-  }
-
+  projects.forEach(function(element) {
+    element.classList.add('deactivecard');
+    element.classList.remove('actiecard');
+  })
   projects[projIndex - 1].classList.remove('deactivecard');
   projects[projIndex - 1].classList.add('activecard');
 }
