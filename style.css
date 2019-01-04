@@ -266,7 +266,7 @@ a {
 
 /* Sliedshow arrow styling */
 .arrow {
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   border: 0;
   border-radius: 50%;
   font-size: 2em;
@@ -372,6 +372,60 @@ a {
   min-height: 200px;
 }
 
+.cv-download {
+  margin: 0px;
+}
+
+.cv-button {
+  background-color: transparent;
+  border: 1px solid rgba(17, 45, 78, 0.5);
+  color: rgba(17, 45, 78, 0.8);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  padding: 10px 50px;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.cv-button:hover {
+  transition: 0.5s ease;
+}
+
+.cv-button::before {
+  content: "";
+  background-color: rgba(17, 45, 78, 1);
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  left: ;
+  transition: 0.5s ease;
+  width: 0;
+  z-index: -1;
+}
+
+.cv-button:hover::before {
+  transition: 0.5s ease;
+  left: 0;
+}
+
+.cv-button::after {
+  content: "";
+  background-color: rgba(17, 45, 78, 1);
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  right: 50%;
+  transition: 0.5s ease;
+  width: 1px;
+  z-index: -1;
+}
+
+.cv-button:hover::after {
+  transition: 0.5s ease;
+  right: 0;
+}
+
 /* Skill section */
 .skillsSec {
   margin-bottom: 30px;
@@ -468,7 +522,6 @@ a {
 }
 
 /* Contact form section */
-
 .formbox {
   background-color: transparent;
   border: none;
@@ -505,81 +558,20 @@ a {
 .submitbutton {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid rgba(17, 45, 78, 0.5);
+  border: 1px solid rgba(17, 45, 78, 0.5);
   color: rgba(17, 45, 78, 0.8);
+  cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 1em;
   padding: 10px 50px;
+  margin: 15px 0px 0px 0px;
   position: relative;
   transition: 0.5s ease;
 }
 
 .submitbutton:active, .submitbutton:focus, .smbtn:active, .smbtn:focus {
   outline: none;
-}
-
-.submitbutton::before {
-  background-color: rgba(17, 45, 78, 0.5);
-  content: '';
-  display: block;
-  height: 0%;
-  position: absolute;
-  left: 0;
-  bottom: 0%;
-  transition: 0.5s ease;
-  width: 1px;
-}
-
-.submitbutton::after {
-  background-color: rgba(17, 45, 78, 0.5);
-  content: '';
-  display: block;
-  height: 0%;
-  position: absolute;
-  right: 0;
-  bottom: 0%;
-  transition: 0.5s ease;
-  width: 1px;
-}
-
-.smbtn {
-  /* Wrap for submit button for hover animation */
-  position: relative;
-  margin-top: 10px;
-  transition: 0.5s ease;
-  width: 135px;
-}
-
-.smbtn::before {
-  content: '';
-  display: block;
-  background-color: rgba(17, 45, 78, 0.5);
-  width: 0%;
-  left: 50%;
-  height: 1px;
-  position: absolute;
-  top: 0;
-  transition: 0.5s ease;
-}
-
-.smbtn:hover::before, .smbtn:active::before, .smbtn:focus::before {
-  background-color: rgba(17, 45, 78, 0.97);
-  transition: 0.5s ease;
-  left: 0;
-  width: 100%;
-}
-
-.submitbutton:hover::before, .submitbutton:hover::after, .submitbutton:active::before, .submitbutton:active::after {
-  background-color: rgba(17, 45, 78, 0.97);
-  height: 100%;
-  transition: 0.5s ease;
-}
-
-.submitbutton:hover, .submitbutton:focus, .submitbutton:active {
-  border-bottom: 1px solid rgba(17, 45, 78, 0.97);
-  cursor: pointer;
-  transition: 0.5s ease;
 }
 
 .letschat:active, .letschat:focus {
@@ -944,6 +936,10 @@ footer a:hover, a:focus {
     margin: 20px 0;
   }
 
+  .aboutmetxt {
+    margin-bottom: 50px;
+  }
+
   .aboutme img {
     margin: 0 auto;
     min-width: 270px;
@@ -952,6 +948,11 @@ footer a:hover, a:focus {
 
   .aboutme p {
     max-width: 735px;
+  }
+
+  .cv-download {
+    position: absolute;
+    left: 35%;
   }
 
   /* Skills section media queries */
@@ -1006,6 +1007,7 @@ footer a:hover, a:focus {
   }
 
   @media (min-width: 1200px) {
+
     .content {
       margin: 30px auto;
       width: 1010px;
@@ -1065,6 +1067,16 @@ footer a:hover, a:focus {
 
     .aboutme p {
       max-width: 1000px;
+    }
+
+    .cv-download {
+      position: relative;
+      margin-top: 37.5px;
+      left: auto;
+    }
+
+    .aboutmetxt {
+      margin-bottom: auto;
     }
 
     .contactformsection {
