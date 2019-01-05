@@ -303,6 +303,18 @@ a {
   width: 100%;
 }
 
+.projecttechs {
+  justify-content: space-around;
+  display: flex;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.projecttechs img {
+  height: 36px;
+  width: auto;
+}
+
 .academicfilmandtv h2 {
   margin-bottom: 20px;
 }
