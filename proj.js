@@ -1,8 +1,8 @@
-var tmcslideIndex = 0;
-var xoslideIndex = 0;
-var jcslidesIndex = 0;
-var aftvslidesIndex = 0;
-var boxslidesIndex = 0;
+let tmcslideIndex = 0;
+let xoslideIndex = 0;
+let jcslidesIndex = 0;
+let aftvslidesIndex = 0;
+let boxslidesIndex = 0;
 showXOSlides();
 showTMCSlides();
 showJCslides();
@@ -10,11 +10,11 @@ showAFTVslides();
 showboxslides();
 
 function showTMCSlides() {
-  var i;
-  var slides = document.getElementsByClassName("tmcslides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+  let i;
+  const slides = document.querySelectorAll(".tmcslides");
+  slides.forEach((slide) => {
+    slide.style.display = "none";
+  })
   tmcslideIndex++;
   if (tmcslideIndex > slides.length) {
     tmcslideIndex = 1
@@ -22,6 +22,8 @@ function showTMCSlides() {
   slides[tmcslideIndex - 1].style.display = "block";
   setTimeout(showTMCSlides, 9000);
 };
+
+// TODO: Convert to ES6
 
 function showXOSlides() {
   var i;

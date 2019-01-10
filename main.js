@@ -1,18 +1,17 @@
 // Open burger menu and play dropdown menu animation on click
 
-var bm = document.querySelector('.bm'); // burger menu
-var dd = document.querySelector('.dd'); // dropdowm menu
-var bars = document.querySelectorAll('.bar');
+const bm = document.querySelector('.bm'); // burger menu
+const dd = document.querySelector('.dd'); // dropdowm menu
+const bars = document.querySelectorAll('.bar');
 
 bm.onclick = openMenu;
 
 function openMenu() {
-
   dd.classList.toggle('ddshow');
-  bars.forEach(function(element, i) {
+  bars.forEach((element, i) => {
     element.classList.toggle('changebar' + [i + 1]);
   })
-}
+};
 
 // Scroll to section on click
 
@@ -22,9 +21,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     });
-    setTimeout(function closeMenu() {
+    setTimeout(() => {
       dd.classList.remove('ddshow');
-      bars.forEach(function(element, i) {
+      bars.forEach((element, i) => {
         element.classList.remove('changebar' + [i + 1]);
       })
     }, 600);
@@ -38,14 +37,12 @@ window.onscroll = function() {
 };
 
 function solidBar() {
-  var navbarswitch = document.querySelector('.navbarswitch');
-  var topbar = document.querySelector('.tb');
-  var joe = document.querySelector('.lj');
-  var sm = document.querySelector('.smwd');
-
-  var navlinkItems = document.querySelectorAll('.navlink');
-
-  var solid = navbarswitch.offsetTop;
+  const navbarswitch = document.querySelector('.navbarswitch');
+  const topbar = document.querySelector('.tb');
+  const joe = document.querySelector('.lj');
+  const sm = document.querySelector('.smwd');
+  const navlinkItems = document.querySelectorAll('.navlink');
+  const solid = navbarswitch.offsetTop;
 
   if (window.pageYOffset >= solid) {
     topbar.classList.add('solidnav');
@@ -68,7 +65,7 @@ function solidBar() {
 
 // Slideshow arrow functions
 
-var projIndex = 1;
+let projIndex = 1;
 showProj(projIndex);
 
 function projCardSwitcher(n) {
@@ -80,14 +77,16 @@ function currentProj(n) {
 }
 
 function showProj(n) {
-  var projects = document.querySelectorAll('.projectcard');
+  let projects = document.querySelectorAll('.projectcard');
+  // Forces projects carousel to loop if user gets to the end
   if (n > projects.length) {
     projIndex = 1;
   }
+  // Similarly, if user
   if (n < 1) {
     projIndex = projects.length;
   }
-  projects.forEach(function(element) {
+  projects.forEach((element) => {
     element.classList.add('deactivecard');
     element.classList.remove('actiecard');
   })
@@ -97,16 +96,16 @@ function showProj(n) {
 
 // Modal controls
 
-var modal = document.querySelector('#myModal');
-var tyModalContent = document.querySelector('#tyModalContent');
-var form = document.querySelector('#contactform');
-var sadmodal = document.querySelector('#sadModal');
-var sadModalContent = document.querySelector('#sadModalContent');
+const modal = document.querySelector('#myModal');
+const tyModalContent = document.querySelector('#tyModalContent');
+const form = document.querySelector('#contactform');
+const sadmodal = document.querySelector('#sadModal');
+const sadModalContent = document.querySelector('#sadModalContent');
 
 function thankyoumodal() {
   modal.classList.add('showmodal');
   tyModalContent.classList.add('show-modal-content');
-  setTimeout(function autoclose() {
+  setTimeout(() => {
     modal.classList.remove('showmodal');
     tyModalContent.classList.remove('show-modal-content');
     form.reset();
@@ -120,28 +119,29 @@ window.onclick = function(event) {
   }
 }
 
-var contactbutton = document.querySelector('#contactbutton');
+const contactbutton = document.querySelector('#contactbutton');
 
-contactbutton.onclick = function(e) {
+contactbutton.addEventListener('click', (e) => {
   e.preventDefault();
   validateForm();
-}
+})
 
 function validateForm() {
-  var a = document.forms['contactform']['name'].value;
-  var b = document.forms['contactform']['mail'].value;
-  var c = document.forms['contactform']['howicanhelp'].value;
+  const form = document.forms['contactform'];
+  const a = form['name'].value;
+  const b = form['mail'].value;
+  const c = form['howicanhelp'].value;
   if (!a || !b || !c) {
     sadmodal.classList.add('showmodal');
     sadModalContent.classList.add('show-modal-content');
-    setTimeout(function autoclosesad() {
+    setTimeout(() => {
       sadmodal.classList.remove('showmodal');
       sadModalContent.classList.remove('show-modal-content');
     }, 2800);
   } else if (a || b || c) {
-    var form = document.querySelector('#contactform');
-    var data = new FormData(form);
-    var request = new XMLHttpRequest();
+    const form = document.querySelector('#contactform');
+    const data = new FormData(form);
+    const request = new XMLHttpRequest();
     request.open('POST', 'email.php', true);
     request.send(data);
 
@@ -150,6 +150,9 @@ function validateForm() {
         thankyoumodal();
       }
     }
-    request.onerror = function() {}
+    request.onerror = function(err) {
+      console.error('Oh dear, something has gone wrong. Please try again.')
+      console.error(err);
+    }
   }
 }
